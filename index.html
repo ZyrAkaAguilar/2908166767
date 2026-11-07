@@ -3,27 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZyrAkaTV | Events Creators</title>
+    <title>ZyrAkaTV</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body class="portfolio-body">
+<body>
 
     <nav class="navbar">
         <div class="nav-left">
             <a href="index.html" class="nav-link active">Inicio</a>
             <a href="blog.html" class="nav-link">Blog</a>
+            <a href="terminos.html" class="nav-link">Términos</a>
         </div>
-
         <div class="nav-center">
-            <img src="https://via.placeholder.com/50x40/ffffff/000000?text=Logo" alt="ZyrAka TV Logo" class="brand-logo">
-            <div class="brand-text">
-                <span class="brand-title">ZYRAKA<sup class="trademark">™</sup></span>
-                <span class="brand-subtitle">TV</span>
-            </div>
+            <img src="https://cdn.discordapp.com/attachments/1435007456987058352/1557927319757131846/Picsart_26-09-26_19-34-39-960.png?ex=6af078a1&is=6aef2721&hm=ed6b729812929106dbf9841adac65ab2098eadf1ab556255bea18cf353b963ba" alt="Logo" class="brand-logo">
+            <span class="brand-title">ZYRAKATV</span>
         </div>
-
         <div class="nav-right">
             <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
             <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
@@ -32,92 +27,151 @@
     </nav>
 
     <header class="hero-section">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <h1 class="hero-title">ELEVANDO EL NIVEL EN <br><span class="highlight">EVENTOS DE MINECRAFT</span></h1>
-            <p class="hero-description">Desarrollo de minijuegos competitivos, mecánicas inéditas y experiencias inmersivas con calidad de producción profesional.</p>
-            <div class="hero-buttons">
-                <a href="https://app.zyrisland.net" class="btn-primary">Entrar al App</a>
-                <a href="#portfolio" class="btn-secondary">Ver Eventos</a>
+        <div class="hero-gradient"></div>
+        
+        <div class="hero-top-text">
+            <h1>ZYRAKATV</h1>
+            <p>Content Creators for Content Creators</p>
+        </div>
+
+        <div class="hero-content-split">
+            <div class="video-container">
+                <img src="https://images.unsplash.com/photo-1614294149010-950b698f72c0?q=80&w=800&auto=format&fit=crop" alt="Video Thumbnail">
+            </div>
+            
+            <div class="hero-text-side">
+                <h2>We help you create <br><span class="highlight-green">Awesome Events.</span></h2>
+                <p>We are a game development studio focused on Minecraft. With over nine years of experience in the industry, we specialize in organizing, developing, and executing events, series, servers, and competitive tournaments.</p>
+                <a href="#about" class="learn-more">Learn more about us</a>
             </div>
         </div>
     </header>
 
-    <section class="features-section">
-        <div class="feature-box">
-            <i class="fas fa-cubes feature-icon"></i>
-            <h3>Minijuegos Custom</h3>
-            <p>Desarrollo propio de mecánicas únicas, roles de equipo y condiciones de victoria personalizadas para cada evento.</p>
-        </div>
-        <div class="feature-box">
-            <i class="fas fa-desktop feature-icon"></i>
-            <h3>Interfaces Inmersivas</h3>
-            <p>Diseño de HUDs personalizados, texturas 256x256 animadas y menús que transforman la experiencia de juego estándar.</p>
-        </div>
-        <div class="feature-box">
-            <i class="fas fa-server feature-icon"></i>
-            <h3>Rendimiento Extremo</h3>
-            <p>Servidores optimizados en las últimas versiones para soportar grandes cantidades de jugadores sin perder fluidez.</p>
+    <section class="news-section">
+        <h2 class="section-title">Últimas Noticias</h2>
+        <div id="news-container" class="news-grid">
         </div>
     </section>
 
-    <section id="portfolio" class="portfolio-section">
-        <h2 class="section-title">EVENTOS <span class="highlight">DESTACADOS</span></h2>
-        
-        <div class="portfolio-grid">
-            <div class="portfolio-card">
-                <img src="https://images.unsplash.com/photo-1607513746994-51f730a44832?q=80&w=800&auto=format&fit=crop" alt="Evento 1">
-                <div class="card-overlay">
+    <section class="slider-section">
+        <h2 class="section-title">¿Qué creamos?</h2>
+        <div class="slider-container" id="slider">
+            <button class="slider-btn prev-btn" id="prev-btn"><i class="fas fa-chevron-left"></i></button>
+            <button class="slider-btn next-btn" id="next-btn"><i class="fas fa-chevron-right"></i></button>
+
+            <div class="slide active" style="background-image: url('https://cdn.discordapp.com/attachments/1435007456987058352/1568479295989616730/null_background.jpg?ex=6af0a06d&is=6aef4eed&hm=57c3dbe24381e3008dd426471ca2f0dae6addf6d3dc8641f886f31ff49b5bedc&');">
+                <div class="slide-info">
                     <h3>Murder Mystery Extreme</h3>
-                    <p>Mecánicas de muerte instantánea, ruletas personalizadas y armas únicas.</p>
+                    <p>Mecánicas de muerte instantánea, ruletas personalizadas y armas únicas desarrolladas desde cero.</p>
                 </div>
             </div>
-            <div class="portfolio-card">
-                <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=800&auto=format&fit=crop" alt="Evento 2">
-                <div class="card-overlay">
-                    <h3>ZyrIsland Minigames</h3>
-                    <p>Un parque de diversiones competitivo con cosméticos e integración web.</p>
-                </div>
-            </div>
-            <div class="portfolio-card">
-                <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=800&auto=format&fit=crop" alt="Evento 3">
-                <div class="card-overlay">
+            <div class="slide" style="background-image: url('https://cdn.discordapp.com/attachments/1435007456987058352/1568479295989616730/null_background.jpg?ex=6af0a06d&is=6aef4eed&hm=57c3dbe24381e3008dd426471ca2f0dae6addf6d3dc8641f886f31ff49b5bedc&');">
+                <div class="slide-info">
                     <h3>Survival SMP Core</h3>
-                    <p>Aventura clásica mejorada con economía, resource packs y clanes.</p>
+                    <p>La experiencia vanilla perfeccionada con optimización extrema y economía balanceada.</p>
+                </div>
+            </div>
+            <div class="slide" style="background-image: url('https://cdn.discordapp.com/attachments/1435007456987058352/1568479295989616730/null_background.jpg?ex=6af0a06d&is=6aef4eed&hm=57c3dbe24381e3008dd426471ca2f0dae6addf6d3dc8641f886f31ff49b5bedc&');">
+                <div class="slide-info">
+                    <h3>Torneos Competitivos</h3>
+                    <p>Infraestructura de red de alta capacidad para soportar a decenas de creadores de contenido simultáneos.</p>
+                </div>
+            </div>
+            <div class="slide" style="background-image: url('https://cdn.discordapp.com/attachments/1435007456987058352/1568479295989616730/null_background.jpg?ex=6af0a06d&is=6aef4eed&hm=57c3dbe24381e3008dd426471ca2f0dae6addf6d3dc8641f886f31ff49b5bedc&');">
+                <div class="slide-info">
+                    <h3>Interfaces Inmersivas (HUDs)</h3>
+                    <p>Menús interactivos y texturas animadas que cambian por completo la forma de jugar Minecraft.</p>
+                </div>
+            </div>
+            <div class="slide" style="background-image: url('https://cdn.discordapp.com/attachments/1435007456987058352/1568479295989616730/null_background.jpg?ex=6af0a06d&is=6aef4eed&hm=57c3dbe24381e3008dd426471ca2f0dae6addf6d3dc8641f886f31ff49b5bedc&');">
+                <div class="slide-info">
+                    <h3>ZyrIsland Hub</h3>
+                    <p>El centro neurálgico donde todos los minijuegos se conectan de manera perfecta.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="corporate-footer">
-        <div class="footer-container">
-            <div class="footer-brand">
-                <div class="brand-text" style="margin-bottom: 15px;">
-                    <span class="brand-title">ZYRAKA<sup class="trademark">™</sup></span>
-                    <span class="brand-subtitle">TV</span>
+    <section class="minigames-section">
+        <h2 class="section-title">Minijuegos Caóticos</h2>
+        <div class="minigames-grid">
+            
+            <div class="minigame-card">
+                <div class="minigame-title">BedWars Rush</div>
+                <div class="minigame-img-container">
+                    <img src="https://cdn.discordapp.com/attachments/1435007456987058352/1568479295989616730/null_background.jpg?ex=6af0a06d&is=6aef4eed&hm=57c3dbe24381e3008dd426471ca2f0dae6addf6d3dc8641f886f31ff49b5bedc&" alt="Minijuego 1">
                 </div>
-                <p class="footer-desc">Creando el estándar de oro en eventos competitivos de la comunidad hispana. Innovación, código y creatividad.</p>
             </div>
             
-            <div class="footer-links">
-                <h4>Navegación</h4>
-                <a href="#">Inicio</a>
-                <a href="#">Proyectos</a>
-                <a href="#">Blog</a>
-                <a href="https://app.zyrisland.net">App Client</a>
+            <div class="minigame-card">
+                <div class="minigame-title">SkyBlock Hardcore</div>
+                <div class="minigame-img-container">
+                    <img src="https://cdn.discordapp.com/attachments/1435007456987058352/1568479295989616730/null_background.jpg?ex=6af0a06d&is=6aef4eed&hm=57c3dbe24381e3008dd426471ca2f0dae6addf6d3dc8641f886f31ff49b5bedc&" alt="Minijuego 2">
+                </div>
             </div>
 
-            <div class="footer-links">
-                <h4>Legal</h4>
-                <a href="#">Términos de Servicio</a>
-                <a href="#">Política de Privacidad</a>
-                <a href="#">Reglas de la Comunidad</a>
+            <div class="minigame-card">
+                <div class="minigame-title">TNT Run Custom</div>
+                <div class="minigame-img-container">
+                    <img src="https://cdn.discordapp.com/attachments/1435007456987058352/1568479295989616730/null_background.jpg?ex=6af0a06d&is=6aef4eed&hm=57c3dbe24381e3008dd426471ca2f0dae6addf6d3dc8641f886f31ff49b5bedc&" alt="Minijuego 3">
+                </div>
+            </div>
+
+            <div class="minigame-card">
+                <div class="minigame-title">DeathRun Pro</div>
+                <div class="minigame-img-container">
+                    <img src="https://cdn.discordapp.com/attachments/1435007456987058352/1568479295989616730/null_background.jpg?ex=6af0a06d&is=6aef4eed&hm=57c3dbe24381e3008dd426471ca2f0dae6addf6d3dc8641f886f31ff49b5bedc&" alt="Minijuego 4">
+                </div>
+            </div>
+
+            <div class="minigame-card">
+                <div class="minigame-title">Parkour Spiral</div>
+                <div class="minigame-img-container">
+                    <img src="https://cdn.discordapp.com/attachments/1435007456987058352/1568479295989616730/null_background.jpg?ex=6af0a06d&is=6aef4eed&hm=57c3dbe24381e3008dd426471ca2f0dae6addf6d3dc8641f886f31ff49b5bedc&" alt="Minijuego 5">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="footer-top">
+            <div class="footer-brand-area">
+                <img src="https://cdn.discordapp.com/attachments/1435007456987058352/1557927319757131846/Picsart_26-09-26_19-34-39-960.png?ex=6af078a1&is=6aef2721&hm=ed6b729812929106dbf9841adac65ab2098eadf1ab556255bea18cf353b963ba" alt="Logo">
+                <h2>ZyrAkaTV<sup style="font-size: 0.6em;">®</sup></h2>
+            </div>
+            
+            <div class="footer-links-grid">
+                <div class="footer-column">
+                    <h4>COMPANY</h4>
+                    <a href="#">About</a>
+                    <a href="#">Collaborators</a>
+                    <a href="#">Contact</a>
+                </div>
+                <div class="footer-column">
+                    <h4>COMMUNITY</h4>
+                    <a href="#">Discord Betatest</a>
+                    <a href="#">Discord ZyrAkaTV</a>
+                </div>
+                <div class="footer-column">
+                    <h4>LEGAL</h4>
+                    <a href="reglas.html">Privacy Policy</a>
+                    <a href="terminos.html">Terms & Conditions</a>
+                </div>
             </div>
         </div>
+        
         <div class="footer-bottom">
-            <p>™ 2026 ZyrAkaTV. Marca comercial.</p>
+            <div>© 2026 <span class="red-text">ZyrAkaTV. Marca comercial.</span></div>
+            <div class="footer-socials">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-paypal"></i></a>
+                <a href="#"><i class="fab fa-discord"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
         </div>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>
