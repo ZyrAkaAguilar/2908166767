@@ -1,13 +1,9 @@
 
 document.addEventListener('DOMContentLoaded', () => {
     
-    // ==========================================
-    // 1. CARGA DEL FEED DE NOTICIAS (news.json)
-    // ==========================================
     async function loadNews() {
         const container = document.getElementById('news-container');
         try {
-            // Se usa cache-buster para asegurar la versión más reciente
             const res = await fetch(`news.json?t=${new Date().getTime()}`);
             if (!res.ok) throw new Error("No se encontró news.json");
             
@@ -30,9 +26,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     loadNews();
 
-    // ==========================================
-    // 2. LÓGICA DEL SLIDER AUTOMÁTICO (10 Segundos)
-    // ==========================================
     const slides = document.querySelectorAll('.slide');
     const prevBtn = document.getElementById('prev-btn');
     const nextBtn = document.getElementById('next-btn');
@@ -41,13 +34,10 @@ document.addEventListener('DOMContentLoaded', () => {
     let slideInterval;
 
     function showSlide(index) {
-        // Quitar la clase active del actual
         slides[currentSlide].classList.remove('active');
         
-        // Calcular el nuevo índice (cíclico)
         currentSlide = (index + slides.length) % slides.length;
         
-        // Poner la clase active al nuevo
         slides[currentSlide].classList.add('active');
     }
 
@@ -59,10 +49,9 @@ document.addEventListener('DOMContentLoaded', () => {
         showSlide(currentSlide - 1);
     }
 
-    // Botones manuales
     nextBtn.addEventListener('click', () => {
         nextSlide();
-        resetTimer(); // Reinicia el contador si el usuario hace clic
+        resetTimer();
     });
     
     prevBtn.addEventListener('click', () => {
@@ -70,7 +59,6 @@ document.addEventListener('DOMContentLoaded', () => {
         resetTimer();
     });
 
-    // Auto-play cada 10 segundos (10000 ms)
     function startTimer() {
         slideInterval = setInterval(nextSlide, 10000);
     }
@@ -80,6 +68,5 @@ document.addEventListener('DOMContentLoaded', () => {
         startTimer();
     }
 
-    // Iniciar el temporizador al cargar la página
     startTimer();
 });
