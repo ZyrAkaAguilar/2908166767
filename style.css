@@ -55,7 +55,7 @@ body.portfolio-body {
 .brand-text { display: flex; flex-direction: column; line-height: 1; }
 .brand-title { font-weight: 900; font-size: 1.4rem; letter-spacing: -0.5px; }
 .trademark { font-size: 0.6rem; font-weight: 400; }
-.brand-subtitle { font-weight: 300; font-size: 1rem; letter-spacing: 4px; color: #cc1224; }
+.brand-subtitle { font-weight: 300; font-size: 1rem; letter-spacing: 4px; color: #fff; }
 
 .social-icon {
     color: #fff;
