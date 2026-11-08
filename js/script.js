@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     async function loadNews() {
         const container = document.getElementById('news-container');
         try {
-            const res = await fetch(`news.json?t=${new Date().getTime()}`);
+            const res = await fetch(`../data/news.json?t=${new Date().getTime()}`);
             if (!res.ok) throw new Error("No se encontró news.json");
             
             const newsData = await res.json();
