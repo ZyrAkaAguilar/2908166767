@@ -636,3 +636,88 @@ select { background-color: #000; color: #fff; border: 1px solid #333; padding: 5
 .hidden {
     display: none !important;
 }
+
+/* =========================================
+   ADAPTACIÓN RESPONSIVA (MÓVILES Y TABLETS)
+   ========================================= */
+@media screen and (max-width: 768px) {
+    /* Login / 404 */
+    h1 { font-size: 2.2rem; }
+    h2 { font-size: 1.5rem; margin-bottom: 30px; }
+    input { width: 90%; max-width: 280px; }
+    .btn-small { width: 90%; max-width: 280px; }
+    .toast { width: 90%; }
+    
+    /* Dashboard: Se convierte en un feed vertical scrolleable */
+    .dashboard-body, .instance-body { overflow: auto; }
+    .dashboard-layout { 
+        flex-direction: column; 
+        height: auto; 
+        min-height: 100vh; 
+    }
+    .sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #1a1a1a;
+        padding: 20px 0;
+        align-items: center;
+    }
+    .sidebar-menu {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+    .menu-item { padding: 10px 15px; }
+    
+    .main-header {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+        padding: 20px;
+    }
+    .search-box { width: 100%; max-width: 300px; }
+    
+    .content-area { padding: 30px 20px; }
+    .page-title {
+        font-size: 2.2rem;
+        text-align: center;
+    }
+    .instances-grid { justify-content: center; }
+    
+    /* Página Play (Instancia) */
+    .instance-layout { flex-direction: column-reverse; height: auto; min-height: 100vh;}
+    .side-dock {
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        padding: 10px 20px;
+        border-right: none;
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+        box-sizing: border-box;
+    }
+    .dock-top, .dock-icons, .dock-bottom {
+        flex-direction: row;
+        width: auto;
+        gap: 15px;
+    }
+    .main-stage {
+        padding: 40px 20px;
+    }
+    .download-panel {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        flex-direction: column;
+    }
+    .dp-left { padding: 25px; text-align: center; }
+    .dp-right { width: 100%; height: 200px; }
+    #dp-title { font-size: 1.5rem; }
+    
+    .btn-play {
+        padding: 15px 40px;
+        font-size: 1.5rem;
+        width: 100%;
+        max-width: 350px;
+    }
+}
