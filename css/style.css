@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800;900&display=swap');
 
 :root {
@@ -161,7 +160,6 @@ body {
 .news-title { font-size: 1.3rem; margin: 0 0 15px 0; font-weight: 700; }
 .news-desc { color: #aaa; font-size: 0.95rem; line-height: 1.5; margin: 0; }
 
-
 .slider-section {
     padding: 60px 0;
     background-color: #070709;
@@ -256,10 +254,10 @@ body {
 }
 
 /* =========================================
-   FOOTER (Estilo idéntico a la imagen 2)
+   FOOTER
    ========================================= */
 .site-footer {
-    background-color: #0b0f19; /* Color azul muy oscuro de la imagen */
+    background-color: #0b0f19;
     padding: 60px 80px 30px 80px;
     font-size: 0.9rem;
     border-top: 1px solid #1a1a24;
@@ -293,7 +291,7 @@ body {
     color: #fff; margin: 0 0 10px 0; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;
 }
 .footer-column a {
-    color: var(--accent-red); /* Cambiado al rojo para mantener tu marca, o puedes poner verde si lo prefieres */
+    color: var(--accent-red);
     text-decoration: none;
     font-weight: 600;
     transition: filter 0.3s;
@@ -312,3 +310,76 @@ body {
 .footer-socials { display: flex; gap: 15px; }
 .footer-socials a { color: #888; font-size: 1.2rem; transition: color 0.3s; }
 .footer-socials a:hover { color: #fff; }
+
+/* =========================================
+   ADAPTACIÓN RESPONSIVA (MÓVILES Y TABLETS)
+   ========================================= */
+@media screen and (max-width: 768px) {
+    /* Navbar en columna */
+    .navbar {
+        flex-direction: column;
+        height: auto;
+        padding: 15px;
+        gap: 15px;
+    }
+    .nav-left, .nav-center, .nav-right {
+        justify-content: center;
+        width: 100%;
+        gap: 15px;
+    }
+    
+    /* Hero section */
+    .hero-top-text { margin-top: 180px; }
+    .hero-top-text h1 { font-size: 2.5rem; }
+    .hero-content-split {
+        flex-direction: column;
+        margin-top: 50px;
+        gap: 30px;
+        text-align: center;
+    }
+    .video-container { width: 100%; max-width: 100%; }
+    .hero-text-side h2 { font-size: 2rem; }
+    
+    /* Noticias */
+    .news-section { padding: 50px 20px; }
+    .section-title { font-size: 2rem; margin-bottom: 30px; }
+    
+    /* Slider de imágenes */
+    .slider-container { height: 350px; }
+    .slide-info {
+        height: auto;
+        padding: 20px;
+        text-align: center;
+    }
+    .slide-info h3 { font-size: 1.4rem; }
+    .slide-info p { font-size: 0.95rem; }
+    .slider-btn { padding: 10px; font-size: 1.5rem; }
+    
+    /* Minijuegos */
+    .minigames-section { padding: 50px 20px; }
+    .minigames-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    .minigame-card { width: 100%; max-width: 320px; }
+    
+    /* Footer apilado */
+    .site-footer { padding: 40px 20px 20px 20px; }
+    .footer-top {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 40px;
+    }
+    .footer-links-grid {
+        flex-direction: column;
+        gap: 40px;
+        align-items: center;
+        text-align: center;
+    }
+    .footer-bottom {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+}
