@@ -401,42 +401,41 @@
 
     <div id="toast-container" class="toast-container"></div>
 
-    <main class="redirect-card">
-        <div class="discord-badge" aria-hidden="true">
-            <svg viewBox="0 0 127.14 96.36">
-                <path d="M107.7,8.07A105.15,105.15,0,0,0,81.47,0a72.06,72.06,0,0,0-3.36,6.83A97.68,97.68,0,0,0,49,6.83,72.37,72.37,0,0,0,45.64,0,105.89,105.89,0,0,0,19.39,8.09C2.79,32.65-1.71,56.6.54,80.21h0A105.73,105.73,0,0,0,32.71,96.36,77.7,77.7,0,0,0,39.6,85.25a68.42,68.42,0,0,1-10.85-5.18c.91-.66,1.8-1.34,2.66-2a75.57,75.57,0,0,0,64.32,0c.87.71,1.76,1.39,2.66,2a68.68,68.68,0,0,1-10.87,5.19,77,77,0,0,0,6.89,11.1A105.25,105.25,0,0,0,126.6,80.22h0C129.24,52.84,122.09,29.11,107.7,8.07ZM42.45,65.69C36.18,65.69,31,60,31,53s5-12.74,11.43-12.74S54,46,53.89,53,48.84,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.25,60,73.25,53s5-12.74,11.44-12.74S96.23,46,96.12,53,91.08,65.69,84.69,65.69Z"/>
-            </svg>
+    <main class="container">
+        <span class="status-label">Redirigiendo</span>
+        <h1>ZYRISLAND <span class="highlight" id="dest-name">DISCORD</span></h1>
+        <p id="dest-sub">Conectando con el destino seleccionado...</p>
+
+        <div class="progress-track">
+            <div class="progress-fill" id="progress-fill"></div>
         </div>
 
-        <span class="tag-pill">Comunidad Oficial</span>
-        <h1>DISCORD <span class="highlight">ZYRISLAND</span></h1>
-        <p class="subtitle">Estamos conectándote con nuestro servidor oficial para que puedas ver anuncios, eventos y charlar con otros jugadores.</p>
-
-        <div class="progress-wrapper">
-            <div class="progress-header">
-                <span id="status-text">Verificando invitación...</span>
-                <span id="countdown-text">3.5s</span>
-            </div>
-            <div class="progress-track">
-                <div id="progress-fill" class="progress-fill"></div>
-            </div>
-        </div>
-
-        <div class="actions-group">
-            <a id="join-btn" href="https://discord.gg/pNQAW7DCUu" class="red-btn">
-                Unirse Ahora
-            </a>
-            <button id="copy-btn" type="button" class="outline-btn">
-                Copiar Link
-            </button>
-        </div>
-
-        <div class="invite-url-box">https://discord.gg/pNQAW7DCUu</div>
-
-        <a href="https://zyrisland.net" class="back-link">← Volver a zyrisland.net</a>
+        <a href="https://discord.gg/pNQAW7DCUu" id="direct-link" class="red-btn">Continuar</a>
     </main>
 
     <script>
+        const REDIRECT_CONFIG = {
+            destino: "DISCORD",
+            url: "https://discord.gg/pNQAW7DCUu",
+            tiempoMs: 2000
+        };
+
+        document.title = `ZyrIsland | ${REDIRECT_CONFIG.destino}`;
+        document.getElementById("dest-name").textContent = REDIRECT_CONFIG.destino;
+        const directLink = document.getElementById("direct-link");
+        directLink.href = REDIRECT_CONFIG.url;
+
+        const fill = document.getElementById("progress-fill");
+        fill.style.transitionDuration = `${REDIRECT_CONFIG.tiempoMs}ms`;
+
+        requestAnimationFrame(() => {
+            fill.style.width = "100%";
+        });
+
+        setTimeout(() => {
+            window.location.replace(REDIRECT_CONFIG.url);
+        }, REDIRECT_CONFIG.tiempoMs);
+        
         const DISCORD_URL = "https://discord.gg/pNQAW7DCUu";
         const REDIRECT_DURATION = 3500;
         const progressFill = document.getElementById("progress-fill");
