@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZyrIsland | Discord Oficial</title>
+    <meta name="description" content="Únete al servidor oficial de Discord de ZyrIsland Minigames. Enterate de eventos, actualizaciones y participa con la comunidad.">
+    <meta name="theme-color" content="#cc1224">
+
+    <!-- Open Graph para vistas previas al compartir el enlace -->
+    <meta property="og:title" content="ZyrIsland | Discord Oficial">
+    <meta property="og:description" content="Únete al servidor oficial de Discord de ZyrIsland Minigames. Enterate de eventos, actualizaciones y participa con la comunidad.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://zyrisland.net/share/discord">
+
+    <!-- Favicons del proyecto -->
+    <link rel="icon" type="image/png" href="../favicon/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="../favicon/favicon.svg">
+    <link rel="shortcut icon" href="../favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-dark: #070707;
+            --surface-dark: #0e0e12;
+            --border-subtle: #1f1f25;
+            --text-main: #ffffff;
+            --text-muted: #a0a0a0;
+            --accent-red: #cc1224;
+            --accent-red-hover: #e61529;
+            --accent-green: #28a745;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 20px;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            font-family: 'Montserrat', sans-serif;
+            min-height: 100dvh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        .top-red-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background-color: var(--accent-red);
+            z-index: 50;
+        }
+
+        /* Anillo decorativo de fondo */
+        .background-graphic {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: min(85vw, 750px);
+            height: min(85vw, 750px);
+            border: 35px solid rgba(255, 255, 255, 0.02);
+            border-radius: 50%;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .background-glow {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 420px;
+            height: 420px;
+            background: radial-gradient(circle, rgba(204, 18, 36, 0.12) 0%, rgba(7, 7, 7, 0) 70%);
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .redirect-card {
+            position: relative;
+            z-index: 10;
+            width: 100%;
+            max-width: 520px;
+            background-color: var(--surface-dark);
+            border: 1px solid var(--border-subtle);
+            border-radius: 6px;
+            padding: 45px 40px;
+            text-align: center;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.85);
+            animation: cardFadeIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        @keyframes cardFadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(15px) scale(0.98);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        .discord-badge {
+            width: 72px;
+            height: 72px;
+            margin: 0 auto 24px auto;
+            background-color: #14141a;
+            border: 1px solid #262630;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+        }
+
+        .discord-badge::after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 20%;
+            width: 60%;
+            height: 2px;
+            background-color: var(--accent-red);
+        }
+
+        .discord-badge svg {
+            width: 38px;
+            height: 38px;
+            fill: #ffffff;
+        }
+
+        .tag-pill {
+            display: inline-block;
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--accent-red);
+            background-color: rgba(204, 18, 36, 0.1);
+            border: 1px solid rgba(204, 18, 36, 0.25);
+            padding: 5px 12px;
+            border-radius: 3px;
+            margin-bottom: 14px;
+        }
+
+        h1 {
+            font-size: clamp(1.75rem, 5vw, 2.3rem);
+            font-weight: 800;
+            margin: 0 0 10px 0;
+            letter-spacing: -0.5px;
+            line-height: 1.15;
+        }
+
+        .highlight {
+            color: var(--accent-red);
+        }
+
+        .subtitle {
+            font-size: 0.98rem;
+            font-weight: 300;
+            color: var(--text-muted);
+            margin: 0 0 32px 0;
+            line-height: 1.5;
+        }
+
+        .progress-wrapper {
+            margin-bottom: 30px;
+            text-align: left;
+        }
+
+        .progress-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.82rem;
+            margin-bottom: 8px;
+        }
+
+        #status-text {
+            color: #d0d0d0;
+            font-weight: 600;
+        }
+
+        #countdown-text {
+            color: var(--accent-red);
+            font-weight: 700;
+            font-family: monospace;
+            font-size: 0.9rem;
+        }
+
+        .progress-track {
+            width: 100%;
+            height: 8px;
+            background-color: #1c1c24;
+            border-radius: 2px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            width: 0%;
+            background-color: var(--accent-red);
+            transition: width 0.1s linear;
+        }
+
+        .actions-group {
+            display: flex;
+            gap: 12px;
+            width: 100%;
+        }
+
+        .red-btn {
+            flex: 1.3;
+            background-color: var(--accent-red);
+            color: #ffffff;
+            text-decoration: none;
+            border: none;
+            padding: 14px 20px;
+            font-size: 0.92rem;
+            font-weight: 800;
+            font-family: 'Montserrat', sans-serif;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            border-radius: 3px;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            transition: background-color 0.25s ease, transform 0.15s ease, box-shadow 0.25s ease;
+            box-shadow: 0 8px 25px rgba(204, 18, 36, 0.35);
+        }
+
+        .red-btn:hover {
+            background-color: var(--accent-red-hover);
+            transform: translateY(-1px);
+            box-shadow: 0 12px 30px rgba(204, 18, 36, 0.5);
+        }
+
+        .red-btn:active {
+            transform: scale(0.98);
+        }
+
+        .outline-btn {
+            flex: 1;
+            background-color: #15151b;
+            color: #d0d0d0;
+            border: 1px solid #2a2a35;
+            padding: 14px 16px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+            border-radius: 3px;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            transition: border-color 0.25s ease, color 0.25s ease, background-color 0.25s ease;
+        }
+
+        .outline-btn:hover {
+            border-color: var(--accent-red);
+            color: #ffffff;
+            background-color: #1a1a22;
+        }
+
+        .invite-url-box {
+            margin-top: 22px;
+            padding: 10px 14px;
+            background-color: #09090c;
+            border: 1px solid #191920;
+            border-radius: 4px;
+            font-size: 0.82rem;
+            color: #777;
+            font-family: monospace;
+            user-select: all;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 26px;
+            color: #777;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 600;
+            transition: color 0.2s ease;
+        }
+
+        .back-link:hover {
+            color: #ffffff;
+        }
+
+        .toast-container {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+            width: 90%;
+            max-width: 340px;
+            pointer-events: none;
+        }
+
+        .toast {
+            background-color: #16161c;
+            border: 1px solid #2c2c36;
+            border-radius: 4px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.75);
+            animation: slideDown 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+        }
+
+        @keyframes slideDown {
+            from { transform: translateY(-25px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .toast-content {
+            display: flex;
+            align-items: center;
+            padding: 14px 16px;
+            gap: 12px;
+        }
+
+        .toast-icon {
+            color: var(--accent-green);
+            display: flex;
+            align-items: center;
+        }
+
+        .toast-text h4 {
+            margin: 0 0 2px 0;
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .toast-text p {
+            margin: 0;
+            font-size: 0.8rem;
+            color: #aaa;
+        }
+
+        .toast-progress {
+            height: 3px;
+            width: 100%;
+            background-color: #222;
+        }
+
+        .toast-progress-bar {
+            height: 100%;
+            width: 100%;
+            background-color: var(--accent-green);
+            animation: progressShrink 3s linear forwards;
+        }
+
+        @keyframes progressShrink {
+            from { width: 100%; }
+            to { width: 0%; }
+        }
+
+        @media screen and (max-width: 520px) {
+            .redirect-card {
+                padding: 35px 22px;
+            }
+
+            .actions-group {
+                flex-direction: column;
+            }
+
+            .red-btn, .outline-btn {
+                width: 100%;
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-red-bar"></div>
+    <div class="background-graphic"></div>
+    <div class="background-glow"></div>
+
+    <div id="toast-container" class="toast-container"></div>
+
+    <main class="redirect-card">
+        <div class="discord-badge" aria-hidden="true">
+            <svg viewBox="0 0 127.14 96.36">
+                <path d="M107.7,8.07A105.15,105.15,0,0,0,81.47,0a72.06,72.06,0,0,0-3.36,6.83A97.68,97.68,0,0,0,49,6.83,72.37,72.37,0,0,0,45.64,0,105.89,105.89,0,0,0,19.39,8.09C2.79,32.65-1.71,56.6.54,80.21h0A105.73,105.73,0,0,0,32.71,96.36,77.7,77.7,0,0,0,39.6,85.25a68.42,68.42,0,0,1-10.85-5.18c.91-.66,1.8-1.34,2.66-2a75.57,75.57,0,0,0,64.32,0c.87.71,1.76,1.39,2.66,2a68.68,68.68,0,0,1-10.87,5.19,77,77,0,0,0,6.89,11.1A105.25,105.25,0,0,0,126.6,80.22h0C129.24,52.84,122.09,29.11,107.7,8.07ZM42.45,65.69C36.18,65.69,31,60,31,53s5-12.74,11.43-12.74S54,46,53.89,53,48.84,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.25,60,73.25,53s5-12.74,11.44-12.74S96.23,46,96.12,53,91.08,65.69,84.69,65.69Z"/>
+            </svg>
+        </div>
+
+        <span class="tag-pill">Comunidad Oficial</span>
+        <h1>DISCORD <span class="highlight">ZYRISLAND</span></h1>
+        <p class="subtitle">Estamos conectándote con nuestro servidor oficial para que puedas ver anuncios, eventos y charlar con otros jugadores.</p>
+
+        <div class="progress-wrapper">
+            <div class="progress-header">
+                <span id="status-text">Verificando invitación...</span>
+                <span id="countdown-text">3.5s</span>
+            </div>
+            <div class="progress-track">
+                <div id="progress-fill" class="progress-fill"></div>
+            </div>
+        </div>
+
+        <div class="actions-group">
+            <a id="join-btn" href="https://discord.gg/pNQAW7DCUu" class="red-btn">
+                Unirse Ahora
+            </a>
+            <button id="copy-btn" type="button" class="outline-btn">
+                Copiar Link
+            </button>
+        </div>
+
+        <div class="invite-url-box">https://discord.gg/pNQAW7DCUu</div>
+
+        <a href="https://zyrisland.net" class="back-link">← Volver a zyrisland.net</a>
+    </main>
+
+    <script>
+        const DISCORD_URL = "https://discord.gg/pNQAW7DCUu";
+        const REDIRECT_DURATION = 3500;
+        const progressFill = document.getElementById("progress-fill");
+        const countdownText = document.getElementById("countdown-text");
+        const statusText = document.getElementById("status-text");
+        const copyBtn = document.getElementById("copy-btn");
+
+        let startTime = performance.now();
+        let redirected = false;
+
+        function updateProgress(currentTime) {
+            const elapsed = currentTime - startTime;
+            const progress = Math.min((elapsed / REDIRECT_DURATION) * 100, 100);
+            const remaining = Math.max(((REDIRECT_DURATION - elapsed) / 1000), 0).toFixed(1);
+
+            progressFill.style.width = `${progress}%`;
+            countdownText.textContent = `${remaining}s`;
+
+            if (progress > 40 && progress < 85) {
+                statusText.textContent = "Abriendo invitación de Discord...";
+            } else if (progress >= 85) {
+                statusText.textContent = "Redirigiendo...";
+            }
+
+            if (elapsed < REDIRECT_DURATION) {
+                requestAnimationFrame(updateProgress);
+            } else if (!redirected) {
+                redirected = true;
+                countdownText.textContent = "LISTO";
+                statusText.textContent = "Si no se abrió, pulsa Unirse Ahora";
+                window.location.href = DISCORD_URL;
+            }
+        }
+
+        requestAnimationFrame(updateProgress);
+
+        copyBtn.addEventListener("click", async () => {
+            try {
+                await navigator.clipboard.writeText(DISCORD_URL);
+                showToast("Enlace copiado", "Invitación lista para pegar en Discord.");
+            } catch (err) {
+                showToast("Invitación", DISCORD_URL);
+            }
+        });
+
+        function showToast(title, message) {
+            const container = document.getElementById("toast-container");
+            container.innerHTML = `
+                <div class="toast">
+                    <div class="toast-content">
+                        <div class="toast-icon">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                        </div>
+                        <div class="toast-text">
+                            <h4>${title}</h4>
+                            <p>${message}</p>
+                        </div>
+                    </div>
+                    <div class="toast-progress">
+                        <div class="toast-progress-bar"></div>
+                    </div>
+                </div>
+            `;
+            setTimeout(() => {
+                container.innerHTML = "";
+            }, 3100);
+        }
+    </script>
+</body>
+</html>
