@@ -1,38 +1,33 @@
 {
   "configuracion": {
     "tituloPortal": "BLOGS DEL **ZYRISLAND**",
-    "subtituloPortal": "Anuncios oficiales, ==devlogs== de nuestros minijuegos, parches del servidor y crónicas de cada evento."
+    "subtituloPortal": "Anuncios oficiales, **devlogs** de nuestros minijuegos, parches del servidor y crónicas de cada evento."
   },
   "blogs": [
     {
-      "id": "temporada-2026-zyrisland",
+      "id": "update_2026-1",
       "destacado": true,
-      "categoria": "Eventos",
+      "categoria": "Noticias",
       "fecha": "16 Nov 2026",
-      "lectura": "4 min de lectura",
-      "autor": "ZyrAkaTV",
-      "rolAutor": "Fundador & Director de Eventos",
+      "lectura": "5 min de lectura",
+      "autor": "CynAkaAgl",
+      "rolAutor": "Fundadora & Directora de Eventos",
       "avatarAutor": "https://mc-heads.net/avatar/ZyrAkaAguilar/100",
-      "imagen": "https://cdn.discordapp.com/attachments/1435007456987058352/1568479295989616730/null_background.jpg",
-      "titulo": "Gran Apertura: **ZyrIsland Minigames 2026**",
-      "resumen": "Todo lo que necesitas saber sobre la nueva temporada, las mecánicas personalizadas, el ==resource pack oficial== y cómo asegurar tu cupo.",
-      "etiquetas": ["minecraft", "evento", "zyrisland", "temporada"],
+      "imagen": "https://app.zyrisland.net/assets/backgrounds/null_background.jpg",
+      "titulo": "En Desarrollo: **ZyrIsland Minigames**",
+      "resumen": "Todo lo que hay que saber del gran desarrollo del ZyrIsland.",
+      "etiquetas": ["minecraft", "evento", "zyrisland", "desarrollo"],
       "contenido": [
-        "# Bienvenidos a la Nueva Era de ZyrIsland",
-        "Después de meses configurando mecánicas a medida, texturas personalizadas y efectos de sonido propios bajo el namespace `zyrisland`, por fin estamos listos para abrir las puertas.",
-        "> Recuerda revisar la sección de **Términos y Condiciones** antes de entrar para evitar sanciones innecesarias durante las partidas en vivo.",
-        "## Novedades Principales de esta Edición",
-        "Hemos renovado por completo la experiencia respecto a ediciones anteriores:",
-        "- **Nuevos Minijuegos Caóticos:** Rondas rápidas con eventos aleatorios en tiempo real.",
-        "- **Interfaz HUD Personalizada:** Indicadores visuales limpios en pantalla y alertas sonoras dinámicas.",
-        "- **Sistema de Puntuación Global:** Cada ronda suma puntos hacia el podio final de la noche.",
-        "### Requisitos para Participar",
-        "1. Tener instalada la versión oficial **Java Edition 1.21.1** con el modpack autorizado.",
-        "2. Contar con tu cuenta verificada en nuestro servidor de [Discord Oficial](https://discord.gg/pNQAW7DCUu).",
-        "3. Activar la descarga automática del paquete de recursos al conectar.",
-        "---",
-        "#### Nota Técnica para Creadores",
-        "Si vas a transmitir en Twitch o YouTube, recuerda ocultar la pantalla de multijugador antes de mostrar tu lista de servidores. *¡Nos vemos en la arena!*"
+        "# En proceso de desarrollo!",
+        "Despues de tantos, años de promesas y eventos cancelados y bugs, en los 5 años que hemos intentado crear algo, por fin llego el momento de construirlo de verdad y eso estamos haciendo el dia de hoy!",
+        "> **ADVERTENCIA:** El equipo al ser de primera generacion del **ZyrAkaTV** y estamos empezando desde cero, nos tomara tiempo para acostumbrarnos. Ademas la creacion de servidores es tardada.",
+        "## Novedades del Desarrollo",
+        "Nosotros los creadores de este proyecto de hace años, porfin estamos en el punto en el que tenemos un equipo realmente firme y talentoso, por lo que estamos acomodando todo para hacerlo de la forma mas profesional posible, por lo que aqui estaran varias cosas que hemos hecho:",
+        "- **Sitio WEB:** Creamos un sitio web, totalmente funcional y listo para todas las necesidades del **ZyrAkaTV**.",
+        "- **Creacion del primer servidor:** Estamos desarrollando el primer servidor, que creara el **ZyrAkaTV** como un equipo.",
+        "- **Mejora de la calidad de ZyrAkaTV Plus:** Mejora en edicion de gameplays de ZyrAkaTV Plus.",
+        "#### Detalles extra",
+        "Esperamos que este ya sea el momento en el que, podremos hacer realidad, el proyecto que tanto hemos intentado hacer desde los 5 años que estamos haciendolo, y por ello, daremos de todo para entregar un evento completo y que valga toda la pena."
       ]
     },
     {
