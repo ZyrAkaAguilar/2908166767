@@ -1,0 +1,65 @@
+{
+  "configuracion": {
+    "tituloPortal": "BLOGS DEL **ZYRISLAND**",
+    "subtituloPortal": "Anuncios oficiales, ==devlogs== de nuestros minijuegos, parches del servidor y crónicas de cada evento."
+  },
+  "blogs": [
+    {
+      "id": "temporada-2026-zyrisland",
+      "destacado": true,
+      "categoria": "Eventos",
+      "fecha": "16 Nov 2026",
+      "lectura": "4 min de lectura",
+      "autor": "ZyrAkaTV",
+      "rolAutor": "Fundador & Director de Eventos",
+      "avatarAutor": "https://mc-heads.net/avatar/ZyrAkaAguilar/100",
+      "imagen": "https://cdn.discordapp.com/attachments/1435007456987058352/1568479295989616730/null_background.jpg",
+      "titulo": "Gran Apertura: **ZyrIsland Minigames 2026**",
+      "resumen": "Todo lo que necesitas saber sobre la nueva temporada, las mecánicas personalizadas, el ==resource pack oficial== y cómo asegurar tu cupo.",
+      "etiquetas": ["minecraft", "evento", "zyrisland", "temporada"],
+      "contenido": [
+        "# Bienvenidos a la Nueva Era de ZyrIsland",
+        "Después de meses configurando mecánicas a medida, texturas personalizadas y efectos de sonido propios bajo el namespace `zyrisland`, por fin estamos listos para abrir las puertas.",
+        "> Recuerda revisar la sección de **Términos y Condiciones** antes de entrar para evitar sanciones innecesarias durante las partidas en vivo.",
+        "## Novedades Principales de esta Edición",
+        "Hemos renovado por completo la experiencia respecto a ediciones anteriores:",
+        "- **Nuevos Minijuegos Caóticos:** Rondas rápidas con eventos aleatorios en tiempo real.",
+        "- **Interfaz HUD Personalizada:** Indicadores visuales limpios en pantalla y alertas sonoras dinámicas.",
+        "- **Sistema de Puntuación Global:** Cada ronda suma puntos hacia el podio final de la noche.",
+        "### Requisitos para Participar",
+        "1. Tener instalada la versión oficial **Java Edition 1.21.1** con el modpack autorizado.",
+        "2. Contar con tu cuenta verificada en nuestro servidor de [Discord Oficial](https://discord.gg/pNQAW7DCUu).",
+        "3. Activar la descarga automática del paquete de recursos al conectar.",
+        "---",
+        "#### Nota Técnica para Creadores",
+        "Si vas a transmitir en Twitch o YouTube, recuerda ocultar la pantalla de multijugador antes de mostrar tu lista de servidores. *¡Nos vemos en la arena!*"
+      ]
+    },
+    {
+      "id": "guia-resource-pack-zyrisland",
+      "destacado": false,
+      "categoria": "Guías",
+      "fecha": "12 Nov 2026",
+      "lectura": "3 min de lectura",
+      "autor": "ZyrAkaTV",
+      "rolAutor": "Desarrollo & Configuración",
+      "avatarAutor": "https://mc-heads.net/avatar/ZyrAkaAguilar/100",
+      "imagen": "https://cdn.discordapp.com/attachments/1435007456987058352/1568479295989616730/null_background.jpg",
+      "titulo": "Cómo solucionar errores con el **Resource Pack**",
+      "resumen": "Aprende a configurar correctamente los paquetes de recursos del servidor para ver todos los iconos, fuentes y escuchar los audios personalizados.",
+      "etiquetas": ["guia", "resource pack", "texturas", "soporte"],
+      "contenido": [
+        "# Solución Rápida de Texturas y Sonido",
+        "Si al ingresar al lobby notas cuadros blancos en lugar de iconos o no escuchas la música de fondo, sigue estos pasos.",
+        "## Pasos en tu Lista de Servidores",
+        "1. Selecciona el servidor de **ZyrIsland** y haz clic en **Editar**.",
+        "2. Cambia la opción `Paquetes de recursos del servidor` a **Activado**.",
+        "3. Guarda los cambios y vuelve a conectarte.",
+        "### Si el problema persiste",
+        "- Ejecuta el comando `/resourcepack` dentro del lobby para forzar la recarga.",
+        "- Asegúrate de no tener otro paquete de fuentes por encima en la lista de *Paquetes de recursos*.",
+        "~~No es necesario descargar archivos externos manualmente~~, el servidor gestiona la versión más reciente automáticamente."
+      ]
+    }
+  ]
+}
