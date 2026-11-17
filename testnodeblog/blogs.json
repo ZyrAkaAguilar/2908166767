@@ -22,11 +22,11 @@
         "## Subtítulo Grande",
         "### Sección Mediana",
         "#### Subsección Pequeña",
-        "**Bold** / ** Bold **",
+        "**Bold** / * * Bold * *",
         "*Italic* / * Italic *",
-        "~~Strikeline~~ / ~~ Text ~~",
-        "==Subrayado== / == Text ==",
-        "`Command` / ` Command `"
+        "~~Strikeline~~ / ~ ~ Strikeline ~ ~",
+        "==Subrayado== / = = Subrayado = =",
+        "`Command` / `` Command `"
       ]
     },
     {
