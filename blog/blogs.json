@@ -1,7 +1,7 @@
 {
   "configuracion": {
     "tituloPortal": "BLOGS DEL **ZYRISLAND**",
-    "subtituloPortal": "Anuncios oficiales, **devlogs** de nuestros minijuegos, parches del servidor y crónicas de cada evento."
+    "subtituloPortal": "Anuncios oficiales, **devlogs** de nuestros servidores, parches del servidor y nuevos videos."
   },
   "blogs": [
     {
@@ -55,7 +55,7 @@
     },
     {
       "id": "upload-002",
-      "destacado": false,
+      "destacado": true,
       "categoria": "Youtube",
       "fecha": "4 May 2026",
       "lectura": "1~ min de lectura",
