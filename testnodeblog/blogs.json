@@ -18,25 +18,15 @@
       "resumen": "Aqui estan todos los caracteres especiales y lo que hacen",
       "etiquetas": ["pruebas"],
       "contenido": [
-        "# Caracteres:",
         "# Título Gigante",
-        ". # Título Gigante > Encabezado principal con linea abajo rojo.",
         "## Subtítulo Grande",
-        ". ## Subtítulo Grande > Encabezado secundario",
         "### Sección Mediana",
-        ". ### Sección Mediana > Encabezado terciario",
         "#### Subsección Pequeña",
-        ". #### Subsección Pequeña > Encabezado cuarto en texto rojo",
         "**texto**",
-        "* *texto * * > Negrita brillante",
         "*texto*",
-        "*texto * > Cursiva",
         "~~texto~~",
-        "~ ~ texto ~ ~ > Tachado",
         "==texto==",
-        "= = texto = = > Resaltado en rojo translucido",
-        "`texto`",
-        "` texto ` > Etiqueta de comando o codigo",
+        "`texto`"
       ]
     },
     {
