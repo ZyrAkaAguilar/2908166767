@@ -31,29 +31,26 @@
       ]
     },
     {
-      "id": "guia-resource-pack-zyrisland",
+      "id": "channel-annuncement",
       "destacado": false,
-      "categoria": "Guías",
-      "fecha": "12 Nov 2026",
-      "lectura": "3 min de lectura",
+      "categoria": "Youtube",
+      "fecha": "21 Ene 2026",
+      "lectura": "1~ min de lectura",
       "autor": "ZyrAkaTV",
-      "rolAutor": "Desarrollo & Configuración",
-      "avatarAutor": "https://mc-heads.net/avatar/ZyrAkaAguilar/100",
-      "imagen": "https://cdn.discordapp.com/attachments/1435007456987058352/1568479295989616730/null_background.jpg",
-      "titulo": "Cómo solucionar errores con el **Resource Pack**",
-      "resumen": "Aprende a configurar correctamente los paquetes de recursos del servidor para ver todos los iconos, fuentes y escuchar los audios personalizados.",
-      "etiquetas": ["guia", "resource pack", "texturas", "soporte"],
+      "rolAutor": "Canal Official",
+      "avatarAutor": "https://mc-heads.net/avatar/nvura/100",
+      "imagen": "https://app.zyrisland.net/assets/backgrounds/null_background.jpg",
+      "titulo": "Jugue **The Forest** por primera vez!",
+      "resumen": "El dia de hoy, jugue con ElGanga a The Forest, un juego de supervivencia realista, muy loco y divertido",
+      "etiquetas": ["theforest", "clips", "funny", "gaming", "zyrakatvplus", "zyrakatv"],
       "contenido": [
-        "# Solución Rápida de Texturas y Sonido",
-        "Si al ingresar al lobby notas cuadros blancos en lugar de iconos o no escuchas la música de fondo, sigue estos pasos.",
-        "## Pasos en tu Lista de Servidores",
-        "1. Selecciona el servidor de **ZyrIsland** y haz clic en **Editar**.",
-        "2. Cambia la opción `Paquetes de recursos del servidor` a **Activado**.",
-        "3. Guarda los cambios y vuelve a conectarte.",
-        "### Si el problema persiste",
-        "- Ejecuta el comando `/resourcepack` dentro del lobby para forzar la recarga.",
-        "- Asegúrate de no tener otro paquete de fuentes por encima en la lista de *Paquetes de recursos*.",
-        "~~No es necesario descargar archivos externos manualmente~~, el servidor gestiona la versión más reciente automáticamente."
+        "# NUEVO CONTENIDO!",
+        "Acabamos de subir un nuevo video de ZyrAkaTV Plus. Asi que ven y mira las tonteras que hicimos esta vez!",
+        "## Link del Video",
+        "- Haz [click aqui](https://www.youtube.com/watch?v=h5pWd5TvrqM&t=984s) para ver el video!",
+        "### REDES SOCIALES:",
+        "- **[Canal Official](https://www.youtube.com/@cynakaagl)**",
+        "- **[Discord Official](https://discord.gg/ExC3TKGmFk)**"
       ]
     }
   ]
