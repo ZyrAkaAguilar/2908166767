@@ -6,7 +6,7 @@
   "blogs": [
     {
       "id": "update_2026-1",
-      "destacado": true,
+      "destacado": false,
       "categoria": "Noticias",
       "fecha": "16 Nov 2026",
       "lectura": "5 min de lectura",
@@ -124,7 +124,7 @@
     },
     {
       "id": "upload-005",
-      "destacado": false,
+      "destacado": true,
       "categoria": "Youtube",
       "fecha": "24 Sep 2026",
       "lectura": "1~ min de lectura",
