@@ -5,6 +5,23 @@
   },
   "blogs": [
     {
+      "id": "publicity-avathecatto",
+      "destacado": false,
+      "categoria": "Publicidad",
+      "fecha": "17 Nov 2026",
+      "lectura": "4 min de lectura",
+      "autor": "AvaTheCat",
+      "rolAutor": "Artista | ZyrIsland Team",
+      "avatarAutor": "https://app.zyrisland.net/assets/icons/pfp/AvaTheCat.png",
+      "imagen": "https://app.zyrisland.net/assets/backgrounds/publicity-001.jpg",
+      "titulo": "Conoce a AvaTheCat! | Artista",
+      "resumen": "Aqui podras conocer a AvaTheCat, una de las artistas officiales del **ZyrAkaTV**! Quieres tener arte como el de Ava? Conoce aqui como tener sus servicios!",
+      "etiquetas": ["ava", "servicios", "contratar", "comisiones", "arte"],
+      "contenido": [
+        "# Null"
+      ]
+    },
+    {
       "id": "testnode_template",
       "destacado": false,
       "categoria": "Template",
