@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cargando artículo | ZyrIsland Blog</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="icon" type="image/png" href="../favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="../favicon/favicon.svg" />
+    <link rel="shortcut icon" href="../favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="ZyrAkaTV" />
+    <link rel="manifest" href="../favicon/site.webmanifest" />
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-left">
+            <a href="https://zyrisland.net" class="nav-link">Inicio</a>
+            <a href="https://zyrisland.net/blog/feed" class="nav-link active">Blog</a>
+            <a href="https://zyrisland.net/soporte/terminos" class="nav-link">Terminos</a>
+            <a href="https://zyrisland.net/soporte/reglas" class="nav-link">Reglas</a>
+        </div>
+        <a href="https://zyrisland.net" class="nav-center">
+            <img src="https://app.zyrisland.net/assets/icons/zyrakatv-ico.png" alt="ZyrAkaTV Logo" class="brand-logo">
+            <div class="brand-text">
+                <span class="brand-title">ZYRAKA<sup class="trademark">™</sup></span>
+                <span class="brand-subtitle">TV</span>
+            </div>
+        </a>
+        <div class="nav-right">
+            <a href="https://www.instagram.com/cynakaagl/" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com/@cynakaagl" class="social-icon"><i class="fab fa-youtube"></i></a>
+            <a href="https://discord.gg/DVBdqXgsGu" class="social-icon"><i class="fab fa-discord"></i></a>
+        </div>
+    </nav>
+
+    <div id="reading-progress" class="reading-progress-bar"></div>
+
+    <header class="post-hero">
+        <div class="post-hero-inner">
+            <a href="https://zyrisland.net/blog/feed" class="back-to-blogs"><i class="fas fa-arrow-left"></i> Volver a todos los blogs</a>
+
+            <div class="blog-meta-line" id="post-meta">
+                <span>Cargando...</span>
+            </div>
+
+            <h1 id="post-title">Cargando artículo...</h1>
+            <p class="post-lead" id="post-summary"></p>
+
+            <div class="post-author-bar">
+                <div class="author-full">
+                    <img id="post-author-avatar" src="https://app.zyrisland.net/assets/icons/zyrakatv-ico.png" alt="Autor">
+                    <div class="author-info">
+                        <strong id="post-author-name">ZyrAkaTV</strong>
+                        <span id="post-author-role">Equipo Oficial ZyrIsland</span>
+                    </div>
+                </div>
+
+                <button type="button" id="share-btn" class="share-post-btn">
+                    <i class="fas fa-link"></i> Compartir enlace
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="post-cover-wrapper" id="post-cover-box" style="display: none;">
+        <img id="post-cover-img" src="" alt="Portada del blog">
+    </div>
+
+    <article class="article-body" id="post-content"></article>
+
+    <section class="related-section" id="related-section" style="display: none;">
+        <h3>Más artículos de <span class="highlight">ZyrIsland</span></h3>
+        <div class="blogs-grid" id="related-grid"></div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="footer-top">
+            <div class="footer-brand-area">
+                <img src="https://app.zyrisland.net/assets/icons/zyrakatv-ico.png" alt="Logo">
+                <h2>ZyrAkaTV<sup style="font-size: 0.6em;">™</sup></h2>
+            </div>
+             <div class="footer-links-grid">
+                <div class="footer-column">
+                    <h4>STUDIO</h4>
+                    <a href="https://zyrisland.net/#estudio" target="_blank">About</a>
+                    <a href="https://zyrisland.net/#proyectos" target="_blank">Portfolio</a>
+                    <a href="https://zyrisland.net/blog/feed" target="_blank">Blog</a>
+                    <a href="https://app.zyrisland.net" target="_blank">Events Portal</a>
+                </div>
+                <div class="footer-column">
+                    <h4>COMMUNITY</h4>
+                    <a href="https://discord.gg/DVBdqXgsGu" target="_blank" rel="noopener">Discord ZyrIsland Club</a>
+                    <a href="https://www.youtube.com/@cynakaagl" target="_blank" rel="noopener">YouTube Oficial</a>
+                    <a href="https://www.instagram.com/cynakaagl/" target="_blank" rel="noopener">Instagram</a>
+                </div>
+                <div class="footer-column">
+                    <h4>LEGAL</h4>
+                    <a href="https://zyrisland.net/soporte/reglas" target="_blank">Privacy Policy</a>
+                    <a href="https://zyrisland.net/soporte/terminos" target="_blank">Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div>ZyrAkaTV™ 2026.<span class="red-text"> Marca comercial.</span></div>
+            <div class="footer-socials">
+                <a href="https://www.instagram.com/cynakaagl/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://paypal.me/zyrakaaguilar" target="_blank"><i class="fab fa-paypal"></i></a>
+                <a href="https://discord.gg/DVBdqXgsGu" target="_blank"><i class="fab fa-discord"></i></a>
+                <a href="https://www.youtube.com/@cynakaagl" target="_blank"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function escapeHtml(str) {
+            return str
+                .replace(/&/g, "&amp;")
+                .replace(/</g, "&lt;")
+                .replace(/>/g, "&gt;");
+        }
+
+        function parseInline(raw) {
+            let text = escapeHtml(raw);
+            text = text.replace(/\[([^\]]+)\]\((https?:\/\/[^\s)]+|\/[^\s)]+)\)/g, '<a href="$2" class="md-link" target="_blank" rel="noopener">$1</a>');
+            text = text.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
+            text = text.replace(/\*(.+?)\*/g, "<em>$1</em>");
+            text = text.replace(/~~(.+?)~~/g, "<del>$1</del>");
+            text = text.replace(/==(.+?)==/g, '<mark class="md-highlight">$1</mark>');
+            text = text.replace(/`(.+?)`/g, '<code class="md-code">$1</code>');
+            return text;
+        }
+
+        function renderRichText(content) {
+            if (!content) return "";
+            const rawText = Array.isArray(content) ? content.join("\n") : String(content);
+            const lines = rawText.split(/\r?\n/);
+
+            let html = "";
+            let inUl = false;
+            let inOl = false;
+
+            const closeLists = () => {
+                if (inUl) { html += "</ul>"; inUl = false; }
+                if (inOl) { html += "</ol>"; inOl = false; }
+            };
+
+            for (let line of lines) {
+                const trimmed = line.trim();
+
+                if (!trimmed) {
+                    closeLists();
+                    continue;
+                }
+
+                if (/^---+$/.test(trimmed)) {
+                    closeLists();
+                    html += '<hr class="md-hr">';
+                    continue;
+                }
+
+                const imgMatch = trimmed.match(/^!\[(.*?)\]\((https?:\/\/[^\s)]+|\/[^\s)]+)\)$/);
+                if (imgMatch) {
+                    closeLists();
+                    const caption = imgMatch[1] ? `<figcaption>${parseInline(imgMatch[1])}</figcaption>` : "";
+                    html += `<figure class="md-figure"><img src="${imgMatch[2]}" alt="${escapeHtml(imgMatch[1] || 'Imagen')}">${caption}</figure>`;
+                    continue;
+                }
+
+                const headingMatch = trimmed.match(/^(#{1,4})\s+(.+)$/);
+                if (headingMatch) {
+                    closeLists();
+                    const level = headingMatch[1].length;
+                    html += `<h${level} class="md-h${level}">${parseInline(headingMatch[2])}</h${level}>`;
+                    continue;
+                }
+
+                if (trimmed.startsWith("> ")) {
+                    closeLists();
+                    html += `<blockquote class="md-quote">${parseInline(trimmed.slice(2))}</blockquote>`;
+                    continue;
+                }
+
+                if (/^[-*]\s+/.test(trimmed)) {
+                    if (inOl) { html += "</ol>"; inOl = false; }
+                    if (!inUl) { html += '<ul class="md-ul">'; inUl = true; }
+                    html += `<li>${parseInline(trimmed.replace(/^[-*]\s+/, ""))}</li>`;
+                    continue;
+                }
+
+                if (/^\d+\.\s+/.test(trimmed)) {
+                    if (inUl) { html += "</ul>"; inUl = false; }
+                    if (!inOl) { html += '<ol class="md-ol">'; inOl = true; }
+                    html += `<li>${parseInline(trimmed.replace(/^\d+\.\s+/, ""))}</li>`;
+                    continue;
+                }
+
+                closeLists();
+                html += `<p>${parseInline(trimmed)}</p>`;
+            }
+
+            closeLists();
+            return html;
+        }
+
+        function stripMarkdown(text) {
+            return (text || "").replace(/[#*_~=`]/g, "");
+        }
+
+        async function loadPost() {
+            const params = new URLSearchParams(window.location.search);
+            const postId = params.get("id");
+
+            try {
+                const res = await fetch(`blogs.json?t=${Date.now()}`, { cache: "no-store" });
+                const data = await res.json();
+                const blogs = Array.isArray(data.blogs) ? data.blogs : [];
+
+                const blog = blogs.find(b => b.id === postId) || blogs[0];
+                if (!blog) {
+                    document.getElementById("post-title").textContent = "Artículo no encontrado";
+                    return;
+                }
+
+                document.title = `${stripMarkdown(blog.titulo)} | ZyrIsland Blog`;
+                document.getElementById("post-meta").innerHTML = `
+                    <span>${blog.categoria || "General"}</span>
+                    <span class="dot">•</span>
+                    <span class="date">${blog.fecha || ""}</span>
+                    <span class="dot">•</span>
+                    <span class="date">${blog.lectura || "3 min de lectura"}</span>
+                `;
+                document.getElementById("post-title").innerHTML = parseInline(blog.titulo);
+                document.getElementById("post-summary").innerHTML = parseInline(blog.resumen);
+                document.getElementById("post-author-name").textContent = blog.autor || "ZyrAkaTV";
+                document.getElementById("post-author-role").textContent = blog.rolAutor || "Administración ZyrIsland";
+                if (blog.avatarAutor) {
+                    document.getElementById("post-author-avatar").src = blog.avatarAutor;
+                }
+
+                if (blog.imagen) {
+                    document.getElementById("post-cover-img").src = blog.imagen;
+                    document.getElementById("post-cover-box").style.display = "block";
+                }
+
+                document.getElementById("post-content").innerHTML = renderRichText(blog.contenido);
+
+                const related = blogs.filter(b => b.id !== blog.id).slice(0, 3);
+                if (related.length > 0) {
+                    document.getElementById("related-section").style.display = "block";
+                    document.getElementById("related-grid").innerHTML = related.map(item => `
+                        <a href="post.html?id=${encodeURIComponent(item.id)}" class="blog-card">
+                            <div class="blog-card-img">
+                                <img src="${item.imagen}" alt="${stripMarkdown(item.titulo)}">
+                            </div>
+                            <div class="blog-card-body">
+                                <div class="blog-meta-line">
+                                    <span>${item.categoria || "General"}</span>
+                                    <span class="dot">•</span>
+                                    <span class="date">${item.fecha || ""}</span>
+                                </div>
+                                <h3 class="blog-card-title">${parseInline(item.titulo)}</h3>
+                                <p class="blog-card-excerpt">${parseInline(item.resumen)}</p>
+                            </div>
+                        </a>
+                    `).join("");
+                }
+            } catch (err) {
+                document.getElementById("post-title").textContent = "Error al cargar el blog";
+            }
+        }
+
+        window.addEventListener("scroll", () => {
+            const scrollTop = window.scrollY;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+            document.getElementById("reading-progress").style.width = `${progress}%`;
+        });
+
+        document.getElementById("share-btn").addEventListener("click", async () => {
+            try {
+                await navigator.clipboard.writeText(window.location.href);
+                const btn = document.getElementById("share-btn");
+                btn.innerHTML = '<i class="fas fa-check"></i> ¡Enlace copiado!';
+                setTimeout(() => {
+                    btn.innerHTML = '<i class="fas fa-link"></i> Compartir enlace';
+                }, 2500);
+            } catch (e) {}
+        });
+
+        loadPost();
+    </script>
+</body>
+</html>

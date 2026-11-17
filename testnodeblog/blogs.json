@@ -1,0 +1,181 @@
+{
+  "configuracion": {
+    "tituloPortal": "BLOGS DEL **ZYRISLAND**",
+    "subtituloPortal": "Anuncios oficiales, **devlogs** de nuestros servidores, parches del servidor y nuevos videos."
+  },
+  "blogs": [
+    {
+      "id": "annuncement-001",
+      "destacado": false,
+      "categoria": "Noticias",
+      "fecha": "19 Nov 2026",
+      "lectura": "5 min de lectura",
+      "autor": "CynAkaAgl",
+      "rolAutor": "Fundadora & Directora de Eventos",
+      "avatarAutor": "https://mc-heads.net/avatar/ZyrAkaAguilar/100",
+      "imagen": "https://app.zyrisland.net/assets/backgrounds/noticia-002.jpg",
+      "titulo": "Hecha un ojo, al equipo de primera generacion!",
+      "resumen": "Hablaremos de todo lo que estamos desarrollando en orden y una pequeña presentacion a el equipo del ZyrAkaTV de primera generacion.",
+      "etiquetas": ["minecraft", "evento", "zyrisland", "desarrollo"],
+      "contenido": [
+        "# Desarrollo & ZyrIsland Team",
+        "Desde hace meses, los fundadores ElGanga y Yo hemos, estado haciendo un verdadero equipo de trabajo, para crear asombrosos proyectos Minecraft, por lo que desde hace ya bastante tiempo, llevamos creando el primer servidor, como el ZyrAkaTV.",
+        "# Horarios de desarrollo:",
+        "## Noviembre",
+        "En este momento, nos estamos concentrando principalmente en lo que seria el canal de youtube y subir lo ultimo que se a grabado, con gran produccion y muy importante, divertido.",
+        "Por otro lado tambien, estamos haciendo cambios al canal para que se divida en dos tipos de contenido:",
+        "1. **Gameplays & Clips:** El canal sera utilizado para subir gameplays chistosos y momentos divertidos. (Como siempre)",
+        "2. **Trailers & Vistasos:** El canal tambien tendra su apartado para subir, trailers y todo lo relacionado con el desarrollo de eventos y servidores",
+        "## Diciembre",
+        "Para este mes, se espera empezar el desarrollo total, de **ZyrIsland Minigames** y creacion de mapas",
+        "Tambien se espera para este mes, subir todos los videos pendientes, que por tiempo, no se a podido subir",
+        "## Enero (2027)",
+        "Para este mes, se espera ya estar terminando al menos dos minijuegos, del servidor y con ello empezar a hacer BetaTest Publicos",
+        "Tambien se espera que para este momento la pagina web este completa, al 100%",
+        "#### Detalles extra",
+        "Esto es todo lo que se a planificado, para desarrollar, asi que habra que esperar a las siguientes noticias."
+      ]
+    },
+    {
+      "id": "update_2026-1",
+      "destacado": false,
+      "categoria": "Noticias",
+      "fecha": "16 Nov 2026",
+      "lectura": "5 min de lectura",
+      "autor": "CynAkaAgl",
+      "rolAutor": "Fundadora & Directora de Eventos",
+      "avatarAutor": "https://mc-heads.net/avatar/ZyrAkaAguilar/100",
+      "imagen": "https://app.zyrisland.net/assets/backgrounds/noticia-001.jpg",
+      "titulo": "En Desarrollo: **ZyrIsland Minigames**",
+      "resumen": "Todo lo que hay que saber del gran desarrollo del ZyrIsland.",
+      "etiquetas": ["minecraft", "evento", "zyrisland", "desarrollo"],
+      "contenido": [
+        "# En proceso de desarrollo!",
+        "Despues de tantos, años de promesas y eventos cancelados y bugs, en los 5 años que hemos intentado crear algo, por fin llego el momento de construirlo de verdad y eso estamos haciendo el dia de hoy!",
+        "> **ADVERTENCIA:** El equipo al ser de primera generacion del **ZyrAkaTV** y estamos empezando desde cero, nos tomara tiempo para acostumbrarnos. Ademas la creacion de servidores es tardada.",
+        "## Novedades del Desarrollo",
+        "Nosotros los creadores de este proyecto de hace años, porfin estamos en el punto en el que tenemos un equipo realmente firme y talentoso, por lo que estamos acomodando todo para hacerlo de la forma mas profesional posible, por lo que aqui estaran varias cosas que hemos hecho:",
+        "- **Sitio WEB:** Creamos un sitio web, totalmente funcional y listo para todas las necesidades del **ZyrAkaTV**.",
+        "- **Creacion del primer servidor:** Estamos desarrollando el primer servidor, que creara el **ZyrAkaTV** como un equipo.",
+        "- **Mejora de la calidad de ZyrAkaTV Plus:** Mejora en edicion de gameplays de ZyrAkaTV Plus.",
+        "#### Detalles extra",
+        "Esperamos que este ya sea el momento en el que, podremos hacer realidad, el proyecto que tanto hemos intentado hacer desde los 5 años que estamos haciendolo, y por ello, daremos de todo para entregar un evento completo y que valga toda la pena."
+      ]
+    },
+    {
+      "id": "upload-001",
+      "destacado": false,
+      "categoria": "Youtube",
+      "fecha": "21 Ene 2026",
+      "lectura": "1~ min de lectura",
+      "autor": "ZyrAkaTV",
+      "rolAutor": "Canal Official",
+      "avatarAutor": "https://mc-heads.net/avatar/nvura/100",
+      "imagen": "https://app.zyrisland.net/assets/backgrounds/thumbnail_1.jpg",
+      "titulo": "Jugue **The Forest** por primera vez!",
+      "resumen": "El dia de hoy, jugue con ElGanga a The Forest, un juego de supervivencia realista, muy loco y divertido",
+      "etiquetas": ["theforest", "clips", "funny", "gaming", "zyrakatvplus", "zyrakatv"],
+      "contenido": [
+        "# NUEVO CONTENIDO!",
+        "Acabamos de subir un nuevo video de ZyrAkaTV Plus. Asi que ven y mira las tonteras que hicimos esta vez!",
+        "## Link del Video",
+        "- Haz [click aqui](https://www.youtube.com/watch?v=h5pWd5TvrqM&t=984s) para ver el video!",
+        "### REDES SOCIALES:",
+        "- **[Canal Official](https://www.youtube.com/@cynakaagl)**",
+        "- **[Discord Official](https://discord.gg/ExC3TKGmFk)**"
+      ]
+    },
+    {
+      "id": "upload-002",
+      "destacado": false,
+      "categoria": "Youtube",
+      "fecha": "4 May 2026",
+      "lectura": "1~ min de lectura",
+      "autor": "ZyrAkaTV",
+      "rolAutor": "Canal Official",
+      "avatarAutor": "https://mc-heads.net/avatar/nvura/100",
+      "imagen": "https://app.zyrisland.net/assets/backgrounds/thumbnail_2.jpg",
+      "titulo": "Bite by Night, el mejor juego de roblox?",
+      "resumen": "El dia de hoy mis amigos me invitaron a jugar Bite By Night! en mi opinion el mejor juego de Fnaf de Roblox",
+      "etiquetas": ["roblox", "clips", "funny", "gaming", "zyrakatvplus", "zyrakatv"],
+      "contenido": [
+        "# NUEVO CONTENIDO!",
+        "Acabamos de subir un nuevo video de ZyrAkaTV Plus. Asi que ven y mira las tonteras que hicimos esta vez!",
+        "## Link del Video",
+        "- Haz [click aqui](https://youtu.be/ds0MPXp1YNs) para ver el video!",
+        "### REDES SOCIALES:",
+        "- **[Canal Official](https://www.youtube.com/@cynakaagl)**",
+        "- **[Discord Official](https://discord.gg/ExC3TKGmFk)**"
+      ]
+    },
+    {
+      "id": "upload-003",
+      "destacado": false,
+      "categoria": "Youtube",
+      "fecha": "18 Jun 2026",
+      "lectura": "1~ min de lectura",
+      "autor": "ZyrAkaTV",
+      "rolAutor": "Canal Official",
+      "avatarAutor": "https://mc-heads.net/avatar/nvura/100",
+      "imagen": "https://app.zyrisland.net/assets/backgrounds/thumbnail_3.jpg",
+      "titulo": "R.E.P.O. Obtuvo una actualizacion!",
+      "resumen": "En este video, invite a mi hermana a probar la actualizacion de R.E.P.O. la **Cosmetic Update** la cual la pasamos increible, tanto que nos morimos de la risa.",
+      "etiquetas": ["REPO", "clips", "funny", "gaming", "zyrakatvplus", "zyrakatv", "hermana"],
+      "contenido": [
+        "# NUEVO CONTENIDO!",
+        "Acabamos de subir un nuevo video de ZyrAkaTV Plus. Asi que ven y mira las tonteras que hicimos esta vez!",
+        "## Link del Video",
+        "- Haz [click aqui](https://youtu.be/IQ9q-8KGlRQ) para ver el video!",
+        "### REDES SOCIALES:",
+        "- **[Canal Official](https://www.youtube.com/@cynakaagl)**",
+        "- **[Discord Official](https://discord.gg/ExC3TKGmFk)**"
+      ]
+    },
+    {
+      "id": "upload-004",
+      "destacado": false,
+      "categoria": "Youtube",
+      "fecha": "9 Aug 2026",
+      "lectura": "1~ min de lectura",
+      "autor": "ZyrAkaTV",
+      "rolAutor": "Canal Official",
+      "avatarAutor": "https://mc-heads.net/avatar/nvura/100",
+      "imagen": "https://app.zyrisland.net/assets/backgrounds/thumbnail_4.jpg",
+      "titulo": "Esto es lo que pasa, si le das internet a los indigenas.",
+      "resumen": "En este video, jugamos yo y los classic a el Rocket League y solo jugamos porque si, solo reimos sacamos clip y ya esta.",
+      "etiquetas": ["rocketleague", "clips", "funny", "gaming", "zyrakatvplus", "zyrakatv"],
+      "contenido": [
+        "# NUEVO CONTENIDO!",
+        "Acabamos de subir un nuevo video de ZyrAkaTV Plus. Asi que ven y mira las tonteras que hicimos esta vez!",
+        "## Link del Video",
+        "- Haz [click aqui](https://youtu.be/AjUaOl5lMeQ) para ver el video!",
+        "### REDES SOCIALES:",
+        "- **[Canal Official](https://www.youtube.com/@cynakaagl)**",
+        "- **[Discord Official](https://discord.gg/ExC3TKGmFk)**"
+      ]
+    },
+    {
+      "id": "upload-005",
+      "destacado": true,
+      "categoria": "Youtube",
+      "fecha": "24 Sep 2026",
+      "lectura": "1~ min de lectura",
+      "autor": "ZyrAkaTV",
+      "rolAutor": "Canal Official",
+      "avatarAutor": "https://mc-heads.net/avatar/nvura/100",
+      "imagen": "https://app.zyrisland.net/assets/backgrounds/thumbnail_5.jpg",
+      "titulo": "¡En este juego CONSTRUYES tu propia pista de carreras!",
+      "resumen": "En este video, jugamos Brace, un juego de roblox en el que construyes una pista de carreras y luego la juegas mientras tratas de conseguir puntos para llegar a la meta de puntos.",
+      "etiquetas": ["roblox", "clips", "funny", "gaming", "zyrakatvplus", "zyrakatv"],
+      "contenido": [
+        "# NUEVO CONTENIDO!",
+        "Acabamos de subir un nuevo video de ZyrAkaTV Plus. Asi que ven y mira las tonteras que hicimos esta vez!",
+        "## Link del Video",
+        "- Haz [click aqui](https://youtu.be/vaLJLErCSv4) para ver el video!",
+        "### REDES SOCIALES:",
+        "- **[Canal Official](https://www.youtube.com/@cynakaagl)**",
+        "- **[Discord Official](https://discord.gg/ExC3TKGmFk)**"
+      ]
+    }
+  ]
+}
