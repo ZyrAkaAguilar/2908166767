@@ -37,9 +37,6 @@
         "= = texto = = > Resaltado en rojo translucido",
         "`texto`",
         "` texto ` > Etiqueta de comando o codigo",
-        "",
-        "",
-        "",
       ]
     },
     {
