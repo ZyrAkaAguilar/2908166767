@@ -26,7 +26,15 @@
         "*Italic* / * Italic *",
         "~~Strikeline~~ / ~ ~ Strikeline ~ ~",
         "==Subrayado== / = = Subrayado = =",
-        "`Command` / `` Command `"
+        "`Command` / `` Command `",
+        "[Click Aqui](https://zyrisland.net/testnodeblog/post.html?id=testnode_template) / Enlace clicable [text] (link)",
+        "- Elemento / - Lista con viñetas",
+        "* Elemento / * Lista con viñetas",
+        "1. Enumerado / 1. Lista enumerada",
+        "2. Enumerado / 2. Lista enumerada",
+        "> texto / > Caja de cita destacada",
+        "---",
+        "![TestImage](https://app.zyrisland.net/assets/backgrounds/null_background.jpg)"
       ]
     },
     {
