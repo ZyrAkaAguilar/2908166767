@@ -933,7 +933,7 @@
         function renderLockedState(data) {
             const closed = data.mensaje_cerrado || {};
             const root = document.getElementById("betatest-root");
-            document.title = "BetaTest Cerrado | ZyrIsland & ZyrAkaTV™";
+            document.title = "No Disponible! | ZyrAkaTV";
 
             root.innerHTML = `
                 <section class="locked-wrapper">
@@ -965,14 +965,14 @@
             const srv = data.servidor || {};
             const objetivos = Array.isArray(data.objetivos_prueba) ? data.objetivos_prueba : [];
             const ip = srv.ip || "beta.zyrisland.net";
-            const version = srv.version || "Java 1.21.1";
+            const version = srv.version || "Java 1.21.11";
             const acceso = srv.acceso || "Premium & No-Premium";
             const modpackReq = Boolean(srv.modpack_requerido);
             const modpackNombre = srv.modpack_nombre || (modpackReq ? "Modpack Oficial Requerido" : "Sin mods obligatorios");
             const modpackUrl = srv.modpack_url || "https://app.zyrisland.net";
 
             const pct = players.maximos > 0 ? Math.min(100, Math.round((players.actuales / players.maximos) * 100)) : 0;
-            document.title = `🟢 BetaTest Abierto (${version}) | ZyrIsland`;
+            document.title = `BetaTest Abierto (${version}) | ZyrIsland`;
 
             const discordAnnouncement = [
                 `🧪 **${data.titulo || "BETATEST PÚBLICO — ZYRISLAND"}**`,
@@ -998,7 +998,6 @@
                     <p>${data.subtitulo || "Conéctate usando los datos oficiales de abajo y ayúdanos a pulir la experiencia antes del estreno."}</p>
                 </header>
 
-                <!-- Tarjeta Principal IP -->
                 <section class="ip-hero-card" aria-label="Dirección IP del servidor">
                     <div class="ip-details">
                         <span class="ip-label"><i class="fas fa-server"></i> Dirección IP Oficial del Servidor</span>
