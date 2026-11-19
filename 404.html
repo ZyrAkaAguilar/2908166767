@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Not Found</title>
-    <link rel="stylesheet" href="/css/404.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>404 — Ruta No Encontrada | ZyrIsland & ZyrAkaTV™</title>
+    <meta name="robots" content="noindex, follow">
+    <meta name="theme-color" content="#cc1224">
 
     <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
@@ -13,32 +13,796 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
     <meta name="apple-mobile-web-app-title" content="ZyrAkaTV" />
     <link rel="manifest" href="/favicon/site.webmanifest" />
-</head>
-<body style="background-color: #070707; overflow: hidden; margin: 0;">
-    
-    <div class="unauthorized-container" style="position: relative; width: 100vw; height: 100vh;">
-        
-        <div class="background-graphic"></div>
-        
-        <div class="login-container" style="z-index: 10; position: relative;">
-            <h1 style="font-size: 9rem; margin-bottom: 0; line-height: 0.9; color: #ffffff;">404</h1>
-            
-            <h1>PAGE <span class="highlight">NOT FOUND</span></h1>
-            
-            <h2 class="small-subtitle" style="margin-top: 20px; font-size: 1.2rem;">
-                Parece que te has salido de los límites del mapa o te has perdido en las Backrooms. <br> La página que buscas no existe o ha sido movida.
-            </h2>
-            
-            <button id="go-home-btn" class="red-btn" style="margin-top: 30px; padding: 15px 40px; font-size: 1.2rem;">
-                <span class="material-icons icon" style="vertical-align: middle;">home</span> Volver al Inicio
-            </button>
-        </div>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --bg-dark: #070707;
+            --surface-card: #0e0e13;
+            --border-subtle: #1f1f28;
+            --text-main: #ffffff;
+            --text-muted: #9e9ea8;
+            --accent-red: #cc1224;
+            --accent-red-hover: #e61529;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            font-family: 'Montserrat', sans-serif;
+            overflow-x: hidden;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .highlight {
+            color: var(--accent-red);
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 80px;
+            background-color: rgba(7, 7, 7, 0.9);
+            backdrop-filter: blur(10px);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 50px;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .nav-left, .nav-center, .nav-right {
+            flex: 1;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-left { justify-content: flex-start; gap: 26px; }
+        .nav-center { justify-content: center; gap: 15px; text-decoration: none; color: #fff; }
+        .nav-right { justify-content: flex-end; gap: 20px; }
+
+        .nav-link {
+            color: #aaa;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.86rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.3s;
+        }
+
+        .nav-link:hover {
+            color: #ffffff;
+        }
+
+        .brand-logo { width: 40px; height: auto; }
+        .brand-text { display: flex; flex-direction: column; line-height: 1; }
+        .brand-title { font-weight: 900; font-size: 1.4rem; letter-spacing: -0.5px; }
+        .trademark { font-size: 0.6rem; font-weight: 400; }
+        .brand-subtitle { font-weight: 300; font-size: 1rem; letter-spacing: 4px; color: #ffffff; }
+
+        .social-icon {
+            color: #fff;
+            font-size: 1.45rem;
+            text-decoration: none;
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        .social-icon:hover {
+            color: var(--accent-red);
+            transform: translateY(-3px);
+        }
+        
+        .error-stage {
+            position: relative;
+            flex: 1;
+            margin-top: 80px;
+            padding: 80px 24px 90px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background: radial-gradient(circle at 50% 42%, rgba(204, 18, 36, 0.14) 0%, #09090c 52%, #070707 100%);
+        }
+
+        .bg-grid {
+            position: absolute;
+            inset: 0;
+            background-image: 
+                linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+            background-size: 48px 48px;
+            mask-image: radial-gradient(circle at center, black 35%, transparent 80%);
+            -webkit-mask-image: radial-gradient(circle at center, black 35%, transparent 80%);
+            pointer-events: none;
+        }
+
+        .geo-ring {
+            position: absolute;
+            top: 45%;
+            left: 50%;
+            border-radius: 50%;
+            border: 1px solid rgba(204, 18, 36, 0.16);
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+        }
+
+        .ring-1 {
+            width: 440px;
+            height: 440px;
+            border-style: dashed;
+            animation: spinSlow 45s linear infinite;
+        }
+
+        .ring-2 {
+            width: 680px;
+            height: 680px;
+            border-color: rgba(255, 255, 255, 0.04);
+            animation: spinReverse 70s linear infinite;
+        }
+
+        @keyframes spinSlow {
+            from { transform: translate(-50%, -50%) rotate(0deg); }
+            to { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+
+        @keyframes spinReverse {
+            from { transform: translate(-50%, -50%) rotate(360deg); }
+            to { transform: translate(-50%, -50%) rotate(0deg); }
+        }
+
+        .error-container {
+            position: relative;
+            z-index: 5;
+            max-width: 820px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .status-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background-color: rgba(204, 18, 36, 0.12);
+            border: 1px solid rgba(204, 18, 36, 0.38);
+            color: #ff4d5e;
+            font-size: 0.78rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 7px 18px;
+            border-radius: 4px;
+            margin-bottom: 18px;
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: var(--accent-red);
+            box-shadow: 0 0 10px var(--accent-red);
+            animation: pulseAlert 1.5s infinite ease-in-out;
+        }
+
+        @keyframes pulseAlert {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.35; transform: scale(1.35); }
+        }
+
+        .glitch-code {
+            position: relative;
+            font-size: clamp(6rem, 18vw, 11.5rem);
+            font-weight: 900;
+            line-height: 0.92;
+            margin: 0 0 16px 0;
+            letter-spacing: -4px;
+            color: #ffffff;
+            text-shadow: 0 15px 45px rgba(204, 18, 36, 0.32);
+            user-select: none;
+        }
+
+        .glitch-code::before,
+        .glitch-code::after {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.75;
+            pointer-events: none;
+        }
+
+        .glitch-code::before {
+            color: var(--accent-red);
+            z-index: -1;
+            animation: glitchShift1 3.8s infinite linear alternate-reverse;
+        }
+
+        .glitch-code::after {
+            color: #00e5ff;
+            z-index: -2;
+            opacity: 0.35;
+            animation: glitchShift2 4.5s infinite linear alternate-reverse;
+        }
+
+        @keyframes glitchShift1 {
+            0%, 92%, 100% { transform: translate(0, 0); }
+            94% { transform: translate(-4px, 2px); }
+            96% { transform: translate(3px, -2px); }
+            98% { transform: translate(-2px, -1px); }
+        }
+
+        @keyframes glitchShift2 {
+            0%, 90%, 100% { transform: translate(0, 0); }
+            93% { transform: translate(4px, -1px); }
+            97% { transform: translate(-3px, 2px); }
+        }
+
+        .error-title {
+            font-size: clamp(1.65rem, 3.8vw, 2.5rem);
+            font-weight: 900;
+            margin: 0 0 14px 0;
+            text-transform: uppercase;
+            letter-spacing: -0.5px;
+        }
+
+        .error-desc {
+            color: var(--text-muted);
+            font-size: 1.04rem;
+            line-height: 1.68;
+            max-width: 640px;
+            margin: 0 auto 30px auto;
+        }
+
+        .terminal-box {
+            background-color: #0c0c10;
+            border: 1px solid #22222c;
+            border-left: 3px solid var(--accent-red);
+            border-radius: 6px;
+            padding: 14px 20px;
+            max-width: 620px;
+            margin: 0 auto 34px auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 14px;
+            text-align: left;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.55);
+        }
+
+        .terminal-info {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            overflow: hidden;
+        }
+
+        .terminal-label {
+            font-size: 0.72rem;
+            font-weight: 800;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            color: #777;
+        }
+
+        .terminal-path {
+            font-family: monospace;
+            font-size: 0.94rem;
+            color: #ff6b7a;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .copy-route-btn {
+            background-color: #16161e;
+            border: 1px solid #2c2c38;
+            color: #ccc;
+            padding: 8px 14px;
+            border-radius: 4px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.76rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+            cursor: pointer;
+            flex-shrink: 0;
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            transition: all 0.25s;
+        }
+
+        .copy-route-btn:hover {
+            border-color: var(--accent-red);
+            color: #fff;
+            background-color: rgba(204, 18, 36, 0.15);
+        }
+
+        .smart-suggestion {
+            display: none;
+            max-width: 620px;
+            margin: -18px auto 32px auto;
+            padding: 12px 18px;
+            background-color: rgba(204, 18, 36, 0.1);
+            border: 1px solid rgba(204, 18, 36, 0.35);
+            border-radius: 6px;
+            font-size: 0.9rem;
+            color: #e6e6ee;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .smart-suggestion a {
+            color: #ffffff;
+            background-color: var(--accent-red);
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-weight: 800;
+            font-size: 0.82rem;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: background-color 0.2s;
+        }
+
+        .smart-suggestion a:hover {
+            background-color: var(--accent-red-hover);
+        }
+
+        .cta-actions {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin-bottom: 52px;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-red);
+            color: #ffffff;
+            text-decoration: none;
+            padding: 15px 30px;
+            font-size: 0.9rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: 4px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 10px 28px rgba(204, 18, 36, 0.35);
+            transition: background-color 0.25s, transform 0.2s, box-shadow 0.25s;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--accent-red-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 14px 34px rgba(204, 18, 36, 0.5);
+        }
+
+        .btn-secondary {
+            background-color: var(--surface-card);
+            color: #ffffff;
+            text-decoration: none;
+            padding: 14px 28px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: 4px;
+            border: 1px solid #2b2b36;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            font-family: 'Montserrat', sans-serif;
+            transition: border-color 0.25s, background-color 0.25s, transform 0.2s;
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--accent-red);
+            background-color: #16161f;
+            transform: translateY(-2px);
+        }
+
+        .quick-destinations {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+            text-align: left;
+        }
+
+        .dest-card {
+            background-color: var(--surface-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: 8px;
+            padding: 20px;
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s;
+        }
+
+        .dest-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--accent-red);
+            box-shadow: 0 14px 30px rgba(0, 0, 0, 0.65);
+        }
+
+        .dest-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 6px;
+            background-color: rgba(204, 18, 36, 0.12);
+            border: 1px solid rgba(204, 18, 36, 0.3);
+            color: var(--accent-red);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            flex-shrink: 0;
+        }
+
+        .dest-card h3 {
+            margin: 0 0 4px 0;
+            font-size: 0.96rem;
+            font-weight: 800;
+            color: #ffffff;
+        }
+
+        .dest-card p {
+            margin: 0;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            line-height: 1.45;
+        }
+
+        /* Notificación Toast */
+        .toast-banner {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            background-color: #111118;
+            border: 1px solid #2c2c38;
+            border-left: 4px solid var(--accent-red);
+            color: #ffffff;
+            padding: 14px 22px;
+            border-radius: 6px;
+            font-size: 0.88rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.75);
+            transform: translateY(120%);
+            opacity: 0;
+            transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.3s ease;
+            z-index: 2000;
+        }
+
+        .toast-banner.show {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .toast-banner i {
+            color: var(--accent-red);
+        }
+
+        .site-footer {
+            background-color: #0b0f19;
+            padding: 60px 80px 30px 80px;
+            font-size: 0.9rem;
+            border-top: 1px solid #1a1a24;
+        }
+
+        .footer-top {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 60px;
+        }
+
+        .footer-brand-area {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .footer-brand-area img { width: 35px; }
+        .footer-brand-area h2 { margin: 0; font-size: 1.5rem; font-weight: 800; }
+
+        .footer-links-grid {
+            display: flex;
+            gap: 80px;
+        }
+
+        .footer-column {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .footer-column h4 {
+            color: #fff;
+            margin: 0 0 10px 0;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .footer-column a {
+            color: var(--accent-red);
+            text-decoration: none;
+            font-weight: 600;
+            transition: filter 0.3s;
+        }
+
+        .footer-column a:hover {
+            filter: brightness(1.3);
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #888;
+        }
+
+        .footer-bottom .red-text { color: var(--accent-red); font-weight: 600; }
+        .footer-socials { display: flex; gap: 15px; }
+        .footer-socials a { color: #888; font-size: 1.2rem; transition: color 0.3s; }
+        .footer-socials a:hover { color: #fff; }
+
+        @media screen and (max-width: 960px) {
+            .navbar {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 20px;
+                gap: 12px;
+            }
+
+            .nav-left, .nav-center, .nav-right {
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 14px;
+            }
+
+            .error-stage {
+                margin-top: 145px;
+                padding-top: 50px;
+            }
+
+            .quick-destinations {
+                grid-template-columns: 1fr;
+            }
+
+            .terminal-box {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .copy-route-btn {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .site-footer {
+                padding: 40px 20px 25px 20px;
+            }
+
+            .footer-top, .footer-links-grid, .footer-bottom {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                gap: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-left">
+            <a href="https://zyrisland.net" class="nav-link">Inicio</a>
+            <a href="https://zyrisland.net/blog/feed" class="nav-link">Blog</a>
+            <a href="https://zyrisland.net/soporte/terminos" class="nav-link">Terminos</a>
+            <a href="https://zyrisland.net/soporte/reglas" class="nav-link">Privacidad</a>
+        </div>
+        <a href="https://zyrisland.net" class="nav-center">
+            <img src="https://app.zyrisland.net/assets/icons/zyrakatv-ico.png" alt="ZyrAkaTV Logo" class="brand-logo">
+            <div class="brand-text">
+                <span class="brand-title">ZYRAKA<sup class="trademark">™</sup></span>
+                <span class="brand-subtitle">TV</span>
+            </div>
+        </a>
+        <div class="nav-right">
+            <a href="https://www.instagram.com/cynakaagl/" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com/@cynakaagl" target="_blank" rel="noopener" class="social-icon" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="https://discord.gg/DVBdqXgsGu" target="_blank" rel="noopener" class="social-icon" aria-label="Discord"><i class="fab fa-discord"></i></a>
+        </div>
+    </nav>
+
+    <main class="error-stage">
+        <div class="bg-grid"></div>
+        <div class="geo-ring ring-1"></div>
+        <div class="geo-ring ring-2"></div>
+
+        <div class="error-container">
+            <div class="status-pill">
+                <span class="status-dot"></span>
+                <span>ERROR 404 • CHUNK NO ENCONTRADO</span>
+            </div>
+
+            <h1 class="glitch-code" data-text="404">404</h1>
+            <h2 class="error-title">TE SALISTE DEL <span class="highlight">MAPA</span></h2>
+            <p class="error-desc">
+                La coordenada que intentas visitar no existe, fue movida a otra instancia o ya no se encuentra disponible dentro de los servidores de <strong>ZyrIsland</strong>.
+            </p>
+
+            <div class="terminal-box">
+                <div class="terminal-info">
+                    <span class="terminal-label">Ruta solicitada</span>
+                    <span class="terminal-path" id="requested-path">/desconocido</span>
+                </div>
+                <button type="button" id="copy-path-btn" class="copy-route-btn">
+                    <i class="fas fa-copy"></i> Copiar ruta
+                </button>
+            </div>
+
+            <div id="smart-suggestion" class="smart-suggestion">
+                <span><i class="fas fa-compass highlight"></i> ¿Tal vez buscabas esta sección oficial?</span>
+                <a id="smart-link" href="https://zyrisland.net">Ir ahora</a>
+            </div>
+
+            <div class="cta-actions">
+                <a href="https://zyrisland.net" class="btn-primary">
+                    <i class="fas fa-home"></i> Volver al Inicio
+                </a>
+                <button type="button" id="go-back-btn" class="btn-secondary">
+                    <i class="fas fa-arrow-left"></i> Página Anterior
+                </button>
+            </div>
+
+            <div class="quick-destinations">
+                <a href="https://app.zyrisland.net" class="dest-card">
+                    <div class="dest-icon"><i class="fas fa-gamepad"></i></div>
+                    <div>
+                        <h3>Portal de Eventos</h3>
+                        <p>Accede a instancias oficiales y descarga modpacks autorizados.</p>
+                    </div>
+                </a>
+
+                <a href="https://zyrisland.net/blog/" class="dest-card">
+                    <div class="dest-icon"><i class="fas fa-newspaper"></i></div>
+                    <div>
+                        <h3>Blog & Devlogs</h3>
+                        <p>Lee anuncios, parches técnicos y crónicas de temporada.</p>
+                    </div>
+                </a>
+
+                <a href="https://discord.gg/DVBdqXgsGu" target="_blank" rel="noopener" class="dest-card">
+                    <div class="dest-icon"><i class="fab fa-discord"></i></div>
+                    <div>
+                        <h3>Soporte en Discord</h3>
+                        <p>Reporta enlaces rotos o abre un ticket con nuestro equipo.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <div id="toast" class="toast-banner">
+        <i class="fas fa-check-circle"></i>
+        <span id="toast-msg">Ruta copiada al portapapeles</span>
     </div>
 
+    <footer class="site-footer">
+        <div class="footer-top">
+            <div class="footer-brand-area">
+                <img src="https://app.zyrisland.net/assets/icons/zyrakatv-ico.png" alt="Logo ZyrAkaTV">
+                <h2>ZyrAkaTV<sup style="font-size: 0.6em;">™</sup></h2>
+            </div>
+            
+            <div class="footer-links-grid">
+                <div class="footer-column">
+                    <h4>COMPANY</h4>
+                    <a href="https://zyrisland.net">About</a>
+                    <a href="https://app.zyrisland.net">Events</a>
+                    <a href="https://discord.gg/DVBdqXgsGu">Contact</a>
+                </div>
+                <div class="footer-column">
+                    <h4>COMMUNITY</h4>
+                    <a href="https://discord.gg/DVBdqXgsGu">Discord ZyrIsland Club</a>
+                </div>
+                <div class="footer-column">
+                    <h4>LEGAL</h4>
+                    <a href="https://zyrisland.net/soporte/reglas">Privacy Policy</a>
+                    <a href="https://zyrisland.net/soporte/terminos">Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div>ZyrAkaTV™ 2026.<span class="red-text"> Marca comercial.</span></div>
+            <div class="footer-socials">
+                <a href="https://www.instagram.com/cynakaagl/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://paypal.me/zyrakaaguilar" target="_blank" rel="noopener" aria-label="PayPal"><i class="fab fa-paypal"></i></a>
+                <a href="https://discord.gg/DVBdqXgsGu" target="_blank" rel="noopener" aria-label="Discord"><i class="fab fa-discord"></i></a>
+                <a href="https://www.youtube.com/@cynakaagl" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+
     <script>
-        document.getElementById('go-home-btn').addEventListener('click', () => {
-            window.location.href = 'https://zyrisland.net'; 
+        const currentPath = window.location.pathname || "/";
+        document.getElementById("requested-path").textContent = currentPath;
+
+        const lowerPath = currentPath.toLowerCase();
+        const routesMap = [
+            { keywords: ["event", "evento", "app", "launcher", "eufonia", "instancia"], label: "Portal de Eventos", url: "https://app.zyrisland.net" },
+            { keywords: ["blog", "noticia", "news", "post", "articulo", "devlog"], label: "Portal de Blogs", url: "https://zyrisland.net/blog/" },
+            { keywords: ["termino", "terminos", "condicion", "tos", "norma"], label: "Términos y Condiciones", url: "https://zyrisland.net/soporte/terminos" },
+            { keywords: ["regla", "reglas", "privacidad", "privacy", "soporte"], label: "Política de Privacidad", url: "https://zyrisland.net/soporte/reglas" },
+            { keywords: ["discord", "comunidad", "unirse", "club"], label: "Discord Oficial", url: "https://discord.gg/DVBdqXgsGu" }
+        ];
+
+        const matchedRoute = routesMap.find(r => r.keywords.some(kw => lowerPath.includes(kw)));
+        if (matchedRoute) {
+            const box = document.getElementById("smart-suggestion");
+            const link = document.getElementById("smart-link");
+            link.textContent = matchedRoute.label;
+            link.href = matchedRoute.url;
+            box.style.display = "flex";
+        }
+        document.getElementById("go-back-btn").addEventListener("click", () => {
+            if (window.history.length > 1) {
+                window.history.back();
+            } else {
+                window.location.href = "https://zyrisland.net";
+            }
+        });
+
+        let toastTimer;
+        function showToast(message) {
+            const toast = document.getElementById("toast");
+            document.getElementById("toast-msg").textContent = message;
+            toast.classList.add("show");
+            clearTimeout(toastTimer);
+            toastTimer = setTimeout(() => toast.classList.remove("show"), 3000);
+        }
+
+        document.getElementById("copy-path-btn").addEventListener("click", async () => {
+            try {
+                await navigator.clipboard.writeText(window.location.href);
+                showToast("Enlace roto copiado al portapapeles");
+            } catch (e) {
+                showToast("No se pudo copiar automáticamente");
+            }
         });
     </script>
 </body>
