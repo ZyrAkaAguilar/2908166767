@@ -1,10 +1,10 @@
 {
   "activo": true,
-  "titulo": "ZyrIsland Minigames — BetaTest Público v0.1",
-  "subtitulo": "Prueba abierta de rendimiento, nuevas arenas competitivas y sincronización del HUD antes del lanzamiento oficial.",
+  "titulo": "ZyrIsland Minigames - Beta v0.1",
+  "subtitulo": "Betatest Official, organizado en MINECRAFT ESPAÑOL.",
   "servidor": {
     "ip": "beta.zyrisland.net",
-    "version": "Java 1.21.1",
+    "version": "Java 1.21.11",
     "acceso": "Premium & No-Premium",
     "modpack_requerido": false,
     "modpack_nombre": "NULL",
