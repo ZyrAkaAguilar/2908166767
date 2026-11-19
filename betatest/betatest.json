@@ -1,0 +1,28 @@
+{
+  "activo": true,
+  "titulo": "ZyrIsland Minigames — BetaTest Público v0.4",
+  "subtitulo": "Prueba abierta de rendimiento, nuevas arenas competitivas y sincronización del HUD antes del lanzamiento oficial.",
+  "servidor": {
+    "ip": "beta.zyrisland.net",
+    "version": "Java 1.21.1",
+    "acceso": "Premium & No-Premium",
+    "modpack_requerido": false,
+    "modpack_nombre": "Vanilla Optimizado (Sodium recomendado)",
+    "modpack_url": "https://app.zyrisland.net"
+  },
+  "jugadores": {
+    "actuales": 18,
+    "maximos": 40,
+    "usar_api_en_vivo": false
+  },
+  "objetivos_prueba": [
+    "Verificar estabilidad de TPS con más de 20 jugadores simultáneos en arena.",
+    "Probar fluidez de los minijuegos caóticos y transiciones entre rondas.",
+    "Reportar cualquier fallo visual, de colisión o de audio en el canal de soporte de Discord."
+  ],
+  "mensaje_cerrado": {
+    "titulo": "BETATEST CERRADO POR EL MOMENTO",
+    "descripcion": "No hay ninguna sesión de pruebas abierta en este instante. Estamos preparando las próximas mecánicas y mapas; únete a Discord para enterarte en cuanto abramos cupos.",
+    "proxima_fecha": "Por anunciar en Discord"
+  }
+}
