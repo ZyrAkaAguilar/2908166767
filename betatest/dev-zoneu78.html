@@ -1,0 +1,1125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BetaTest Official | ZyrAkaTV™</title>
+    <meta name="description" content="Estado en vivo, dirección IP, versión de Minecraft y cupos disponibles para los BetaTests públicos de ZyrIsland.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://zyrisland.net/betatest/">
+    <meta name="theme-color" content="#cc1224">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="ZyrAkaTV™ | Betatest">
+    <meta property="og:title" content="BetaTest Oficial — ZyrIsland (JAVA ONLY | 1.21.11)">
+    <meta property="og:description" content="Copia la IP official y revisa la versión requerida y mira los cupos disponibles en tiempo real.">
+    <meta property="og:url" content="https://zyrisland.net/betatest/">
+    <meta property="og:image" content="https://app.zyrisland.net/assets/icons/zyrakatv-ico.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="BetaTest Official — ZyrIsland">
+    <meta name="twitter:description" content="Estado en vivo, IP de conexión, versión de Minecraft y cupos para las pruebas públicas de ZyrIsland.">
+    <meta name="twitter:image" content="https://app.zyrisland.net/assets/icons/zyrakatv-ico.png">
+
+    <link rel="icon" type="image/png" href="../favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="../favicon/favicon.svg" />
+    <link rel="shortcut icon" href="../favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="ZyrAkaTV" />
+    <link rel="manifest" href="../favicon/site.webmanifest" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --bg-dark: #070707;
+            --surface-card: #0e0e13;
+            --surface-inner: #14141b;
+            --border-subtle: #1f1f28;
+            --text-main: #ffffff;
+            --text-muted: #9e9ea8;
+            --accent-red: #cc1224;
+            --accent-red-hover: #e61529;
+            --accent-green: #10b981;
+            --accent-green-glow: rgba(16, 185, 129, 0.25);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            font-family: 'Montserrat', sans-serif;
+            overflow-x: hidden;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .highlight {
+            color: var(--accent-red);
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 80px;
+            background-color: rgba(7, 7, 7, 0.9);
+            backdrop-filter: blur(10px);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 50px;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .nav-left, .nav-center, .nav-right {
+            flex: 1;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-left { justify-content: flex-start; gap: 26px; }
+        .nav-center { justify-content: center; gap: 15px; text-decoration: none; color: #fff; }
+        .nav-right { justify-content: flex-end; gap: 20px; }
+
+        .nav-link {
+            color: #aaa;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.86rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.3s;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: #ffffff;
+        }
+
+        .brand-logo { width: 40px; height: auto; }
+        .brand-text { display: flex; flex-direction: column; line-height: 1; }
+        .brand-title { font-weight: 900; font-size: 1.4rem; letter-spacing: -0.5px; }
+        .trademark { font-size: 0.6rem; font-weight: 400; }
+        .brand-subtitle { font-weight: 300; font-size: 1rem; letter-spacing: 4px; color: #ffffff; }
+
+        .social-icon {
+            color: #fff;
+            font-size: 1.45rem;
+            text-decoration: none;
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        .social-icon:hover {
+            color: var(--accent-red);
+            transform: translateY(-3px);
+        }
+
+        .betatest-stage {
+            position: relative;
+            flex: 1;
+            margin-top: 80px;
+            padding: 75px 24px 95px 24px;
+            background: radial-gradient(circle at 50% 0%, rgba(204, 18, 36, 0.14) 0%, #09090c 48%, #070707 100%);
+        }
+
+        .bg-grid {
+            position: absolute;
+            inset: 0;
+            background-image: 
+                linear-gradient(rgba(255, 255, 255, 0.022) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.022) 1px, transparent 1px);
+            background-size: 46px 46px;
+            mask-image: radial-gradient(circle at 50% 25%, black 30%, transparent 80%);
+            -webkit-mask-image: radial-gradient(circle at 50% 25%, black 30%, transparent 80%);
+            pointer-events: none;
+        }
+
+        .stage-container {
+            position: relative;
+            z-index: 2;
+            max-width: 960px;
+            margin: 0 auto;
+        }
+      
+        .loading-box {
+            text-align: center;
+            padding: 90px 20px;
+            color: var(--text-muted);
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .spinner {
+            width: 44px;
+            height: 44px;
+            border: 4px solid rgba(255, 255, 255, 0.08);
+            border-top-color: var(--accent-red);
+            border-radius: 50%;
+            margin: 0 auto 18px auto;
+            animation: spin 0.9s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .live-header {
+            text-align: center;
+            margin-bottom: 42px;
+        }
+
+        .live-badges-row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-bottom: 18px;
+        }
+
+        .status-badge-open {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            background-color: rgba(16, 185, 129, 0.12);
+            border: 1px solid rgba(16, 185, 129, 0.4);
+            color: #34d399;
+            font-size: 0.78rem;
+            font-weight: 800;
+            letter-spacing: 1.8px;
+            text-transform: uppercase;
+            padding: 7px 16px;
+            border-radius: 4px;
+        }
+
+        .pulse-dot-green {
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            background-color: var(--accent-green);
+            box-shadow: 0 0 12px var(--accent-green);
+            animation: pulseGreen 1.6s infinite ease-in-out;
+        }
+
+        @keyframes pulseGreen {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.4; transform: scale(1.35); }
+        }
+
+        .access-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background-color: rgba(204, 18, 36, 0.14);
+            border: 1px solid rgba(204, 18, 36, 0.35);
+            color: #ff5c6c;
+            font-size: 0.78rem;
+            font-weight: 800;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            padding: 7px 16px;
+            border-radius: 4px;
+        }
+
+        .live-header h1 {
+            font-size: clamp(2rem, 4.5vw, 3.2rem);
+            font-weight: 900;
+            margin: 0 0 14px 0;
+            line-height: 1.12;
+            letter-spacing: -0.8px;
+        }
+
+        .live-header p {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            max-width: 720px;
+            margin: 0 auto;
+            line-height: 1.65;
+        }
+
+        .ip-hero-card {
+            background: linear-gradient(145deg, #111118 0%, #0b0b0f 100%);
+            border: 1px solid #262632;
+            border-top: 3px solid var(--accent-red);
+            border-radius: 10px;
+            padding: 34px 36px;
+            margin-bottom: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+            box-shadow: 0 22px 50px rgba(0, 0, 0, 0.75);
+        }
+
+        .ip-details {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .ip-label {
+            font-size: 0.76rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1.8px;
+            color: var(--text-muted);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .ip-label i {
+            color: var(--accent-red);
+        }
+
+        .ip-value {
+            font-family: monospace;
+            font-size: clamp(1.45rem, 3.5vw, 2.35rem);
+            font-weight: 800;
+            color: #ffffff;
+            letter-spacing: 0.5px;
+            user-select: all;
+        }
+
+        .ip-actions {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .btn-copy-ip {
+            background-color: var(--accent-red);
+            color: #ffffff;
+            border: none;
+            padding: 16px 30px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.92rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: 6px;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 10px 28px rgba(204, 18, 36, 0.35);
+            transition: background-color 0.25s, transform 0.2s, box-shadow 0.25s;
+        }
+
+        .btn-copy-ip:hover {
+            background-color: var(--accent-red-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 14px 34px rgba(204, 18, 36, 0.5);
+        }
+
+        .btn-copy-ip.copied {
+            background-color: var(--accent-green);
+            box-shadow: 0 10px 28px var(--accent-green-glow);
+        }
+
+        .specs-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+            margin-bottom: 28px;
+        }
+
+        .spec-card {
+            background-color: var(--surface-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: 8px;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: border-color 0.3s, transform 0.25s;
+        }
+
+        .spec-card:hover {
+            border-color: rgba(204, 18, 36, 0.55);
+            transform: translateY(-3px);
+        }
+
+        .spec-top {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 14px;
+        }
+
+        .spec-icon {
+            width: 38px;
+            height: 38px;
+            border-radius: 6px;
+            background-color: rgba(204, 18, 36, 0.12);
+            border: 1px solid rgba(204, 18, 36, 0.3);
+            color: var(--accent-red);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.05rem;
+        }
+
+        .spec-title {
+            font-size: 0.78rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            color: var(--text-muted);
+        }
+
+        .spec-main-value {
+            font-size: 1.45rem;
+            font-weight: 900;
+            color: #ffffff;
+            margin-bottom: 6px;
+        }
+
+        .spec-subtext {
+            font-size: 0.84rem;
+            color: #a8a8b4;
+            line-height: 1.45;
+        }
+
+        .spec-subtext a {
+            color: var(--accent-red);
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .spec-subtext a:hover {
+            text-decoration: underline;
+        }
+      
+        .players-bar-bg {
+            width: 100%;
+            height: 7px;
+            background-color: #1c1c24;
+            border-radius: 99px;
+            overflow: hidden;
+            margin-top: 10px;
+        }
+
+        .players-bar-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--accent-red), #ff4d5e);
+            border-radius: 99px;
+            transition: width 0.5s ease;
+        }
+
+        .details-split {
+            display: grid;
+            grid-template-columns: 1.35fr 1fr;
+            gap: 22px;
+        }
+
+        .objectives-card, .discord-action-card {
+            background-color: var(--surface-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: 8px;
+            padding: 28px;
+        }
+
+        .card-heading {
+            font-size: 1.05rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            margin: 0 0 18px 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .card-heading i {
+            color: var(--accent-red);
+        }
+
+        .objectives-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 13px;
+        }
+
+        .objectives-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            font-size: 0.92rem;
+            color: #d2d2dc;
+            line-height: 1.5;
+            background-color: var(--surface-inner);
+            padding: 12px 15px;
+            border-radius: 6px;
+            border: 1px solid #20202a;
+        }
+
+        .objectives-list li i {
+            color: var(--accent-red);
+            margin-top: 3px;
+            font-size: 0.95rem;
+        }
+
+        .discord-action-card {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background: linear-gradient(160deg, #12121a 0%, #0c0c11 100%);
+        }
+
+        .discord-action-card p {
+            color: var(--text-muted);
+            font-size: 0.92rem;
+            line-height: 1.6;
+            margin: 0 0 22px 0;
+        }
+
+        .discord-btns-stack {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .btn-discord-join {
+            background-color: #5865F2;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 14px 20px;
+            border-radius: 6px;
+            font-size: 0.86rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            transition: filter 0.25s, transform 0.2s;
+        }
+
+        .btn-discord-join:hover {
+            filter: brightness(1.12);
+            transform: translateY(-2px);
+        }
+
+        .btn-copy-discord-msg {
+            background-color: var(--surface-inner);
+            border: 1px solid #2a2a36;
+            color: #e0e0e8;
+            padding: 13px 18px;
+            border-radius: 6px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.82rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 9px;
+            transition: border-color 0.25s, color 0.25s;
+        }
+
+        .btn-copy-discord-msg:hover {
+            border-color: var(--accent-red);
+            color: #ffffff;
+        }
+
+        .locked-wrapper {
+            max-width: 720px;
+            margin: 20px auto 0 auto;
+            background: linear-gradient(145deg, #101016 0%, #0b0b0f 100%);
+            border: 1px solid #22222c;
+            border-top: 3px solid var(--accent-red);
+            border-radius: 12px;
+            padding: 58px 40px;
+            text-align: center;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.85);
+        }
+
+        .lock-shield {
+            width: 82px;
+            height: 82px;
+            border-radius: 50%;
+            background-color: rgba(204, 18, 36, 0.12);
+            border: 1px solid rgba(204, 18, 36, 0.35);
+            color: var(--accent-red);
+            font-size: 2.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px auto;
+            box-shadow: 0 0 35px rgba(204, 18, 36, 0.2);
+        }
+
+        .locked-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background-color: rgba(204, 18, 36, 0.14);
+            border: 1px solid rgba(204, 18, 36, 0.38);
+            color: #ff5c6c;
+            font-size: 0.76rem;
+            font-weight: 800;
+            letter-spacing: 1.8px;
+            text-transform: uppercase;
+            padding: 6px 16px;
+            border-radius: 4px;
+            margin-bottom: 18px;
+        }
+
+        .locked-wrapper h1 {
+            font-size: clamp(1.8rem, 4vw, 2.6rem);
+            font-weight: 900;
+            margin: 0 0 16px 0;
+            text-transform: uppercase;
+            letter-spacing: -0.5px;
+        }
+
+        .locked-wrapper p {
+            color: var(--text-muted);
+            font-size: 1.02rem;
+            line-height: 1.7;
+            max-width: 580px;
+            margin: 0 auto 28px auto;
+        }
+
+        .next-session-box {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background-color: var(--surface-inner);
+            border: 1px solid #262632;
+            padding: 12px 22px;
+            border-radius: 6px;
+            font-size: 0.88rem;
+            color: #d4d4de;
+            margin-bottom: 34px;
+        }
+
+        .next-session-box i {
+            color: var(--accent-red);
+        }
+
+        .locked-actions {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        .btn-home-outline {
+            background-color: var(--surface-inner);
+            color: #ffffff;
+            text-decoration: none;
+            padding: 14px 26px;
+            border-radius: 6px;
+            border: 1px solid #2b2b36;
+            font-size: 0.86rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            transition: border-color 0.25s, transform 0.2s;
+        }
+
+        .btn-home-outline:hover {
+            border-color: var(--accent-red);
+            transform: translateY(-2px);
+        }
+
+        .toast-banner {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            background-color: #111118;
+            border: 1px solid #2c2c38;
+            border-left: 4px solid var(--accent-red);
+            color: #ffffff;
+            padding: 14px 22px;
+            border-radius: 6px;
+            font-size: 0.88rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.75);
+            transform: translateY(120%);
+            opacity: 0;
+            transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.3s ease;
+            z-index: 2000;
+        }
+
+        .toast-banner.show {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .toast-banner i {
+            color: var(--accent-red);
+        }
+
+        .site-footer {
+            background-color: #0b0f19;
+            padding: 60px 80px 30px 80px;
+            font-size: 0.9rem;
+            border-top: 1px solid #1a1a24;
+        }
+
+        .footer-top {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 60px;
+        }
+
+        .footer-brand-area {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .footer-brand-area img { width: 35px; }
+        .footer-brand-area h2 { margin: 0; font-size: 1.5rem; font-weight: 800; }
+
+        .footer-links-grid {
+            display: flex;
+            gap: 80px;
+        }
+
+        .footer-column {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .footer-column h4 {
+            color: #fff;
+            margin: 0 0 10px 0;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .footer-column a {
+            color: var(--accent-red);
+            text-decoration: none;
+            font-weight: 600;
+            transition: filter 0.3s;
+        }
+
+        .footer-column a:hover {
+            filter: brightness(1.3);
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #888;
+        }
+
+        .footer-bottom .red-text { color: var(--accent-red); font-weight: 600; }
+        .footer-socials { display: flex; gap: 15px; }
+        .footer-socials a { color: #888; font-size: 1.2rem; transition: color 0.3s; }
+        .footer-socials a:hover { color: #fff; }
+
+        @media screen and (max-width: 960px) {
+            .navbar {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 20px;
+                gap: 12px;
+            }
+
+            .nav-left, .nav-center, .nav-right {
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 14px;
+            }
+
+            .betatest-stage {
+                margin-top: 150px;
+                padding-top: 45px;
+            }
+
+            .ip-hero-card {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 26px 22px;
+            }
+
+            .btn-copy-ip {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .specs-grid, .details-split {
+                grid-template-columns: 1fr;
+            }
+
+            .locked-wrapper {
+                padding: 42px 24px;
+            }
+
+            .site-footer {
+                padding: 40px 20px 25px 20px;
+            }
+
+            .footer-top, .footer-links-grid, .footer-bottom {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                gap: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-left">
+            <a href="https://zyrisland.net" class="nav-link">Inicio</a>
+            <a href="https://zyrisland.net/blog/" class="nav-link">Blog</a>
+            <a href="https://zyrisland.net/soporte/terminos" class="nav-link">Términos</a>
+            <a href="https://zyrisland.net/soporte/reglas" class="nav-link">Privacidad</a>
+        </div>
+        <a href="https://zyrisland.net" class="nav-center">
+            <img src="https://app.zyrisland.net/assets/icons/zyrakatv-ico.png" alt="ZyrAkaTV Logo" class="brand-logo">
+            <div class="brand-text">
+                <span class="brand-title">ZYRAKA<sup class="trademark">™</sup></span>
+                <span class="brand-subtitle">TV</span>
+            </div>
+        </a>
+        <div class="nav-right">
+            <a href="https://www.instagram.com/cynakaagl/" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com/@cynakaagl" target="_blank" rel="noopener" class="social-icon" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="https://discord.gg/DVBdqXgsGu" target="_blank" rel="noopener" class="social-icon" aria-label="Discord"><i class="fab fa-discord"></i></a>
+        </div>
+    </nav>
+
+    <main class="betatest-stage">
+        <div class="bg-grid"></div>
+        <div id="betatest-root" class="stage-container">
+            <div class="loading-box">
+                <div class="spinner"></div>
+                <div>Sincronizando estado del servidor de pruebas...</div>
+            </div>
+        </div>
+    </main>
+
+    <div id="toast" class="toast-banner">
+        <i class="fas fa-check-circle"></i>
+        <span id="toast-msg">Copiado al portapapeles</span>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-top">
+            <div class="footer-brand-area">
+                <img src="https://app.zyrisland.net/assets/icons/zyrakatv-ico.png" alt="Logo ZyrAkaTV">
+                <h2>ZyrAkaTV<sup style="font-size: 0.6em;">™</sup></h2>
+            </div>
+            
+            <div class="footer-links-grid">
+                <div class="footer-column">
+                    <h4>COMPANY</h4>
+                    <a href="https://zyrisland.net">About</a>
+                    <a href="https://app.zyrisland.net">Events</a>
+                    <a href="https://discord.gg/DVBdqXgsGu">Contact</a>
+                </div>
+                <div class="footer-column">
+                    <h4>COMMUNITY</h4>
+                    <a href="https://discord.gg/DVBdqXgsGu">Discord ZyrIsland Club</a>
+                </div>
+                <div class="footer-column">
+                    <h4>LEGAL</h4>
+                    <a href="https://zyrisland.net/soporte/reglas">Privacy Policy</a>
+                    <a href="https://zyrisland.net/soporte/terminos">Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div>ZyrAkaTV™ 2026.<span class="red-text"> Marca comercial.</span></div>
+            <div class="footer-socials">
+                <a href="https://www.instagram.com/cynakaagl/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://paypal.me/zyrakaaguilar" target="_blank" rel="noopener" aria-label="PayPal"><i class="fab fa-paypal"></i></a>
+                <a href="https://discord.gg/DVBdqXgsGu" target="_blank" rel="noopener" aria-label="Discord"><i class="fab fa-discord"></i></a>
+                <a href="https://www.youtube.com/@cynakaagl" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        let lastSnapshot = "";
+        let toastTimer;
+
+        function showToast(text) {
+            const toast = document.getElementById("toast");
+            document.getElementById("toast-msg").textContent = text;
+            toast.classList.add("show");
+            clearTimeout(toastTimer);
+            toastTimer = setTimeout(() => toast.classList.remove("show"), 3200);
+        }
+
+        async function copyText(text, successMsg, btnElement = null) {
+            try {
+                await navigator.clipboard.writeText(text);
+                showToast(successMsg);
+                if (btnElement) {
+                    const originalHTML = btnElement.innerHTML;
+                    btnElement.classList.add("copied");
+                    btnElement.innerHTML = `<i class="fas fa-check"></i> ¡IP Copiada!`;
+                    setTimeout(() => {
+                        btnElement.classList.remove("copied");
+                        btnElement.innerHTML = originalHTML;
+                    }, 2200);
+                }
+            } catch (e) {
+                showToast("No se pudo copiar automáticamente");
+            }
+        }
+
+        async function fetchLivePlayersIfEnabled(data) {
+            const srv = data.servidor || {};
+            const jug = data.jugadores || {};
+            if (!jug.usar_api_en_vivo || !srv.ip) {
+                return {
+                    actuales: Number(jug.actuales ?? 0),
+                    maximos: Number(jug.maximos ?? 40)
+                };
+            }
+
+            try {
+                const res = await fetch(`https://api.mcsrvstat.us/3/${encodeURIComponent(srv.ip)}`);
+                if (!res.ok) throw new Error("API offline");
+                const status = await res.json();
+                if (status && status.online && status.players) {
+                    return {
+                        actuales: status.players.online ?? 0,
+                        maximos: status.players.max ?? (jug.maximos || 40)
+                    };
+                }
+            } catch (e) {
+            }
+
+            return {
+                actuales: Number(jug.actuales ?? 0),
+                maximos: Number(jug.maximos ?? 40)
+            };
+        }
+
+        function renderLockedState(data) {
+            const closed = data.mensaje_cerrado || {};
+            const root = document.getElementById("betatest-root");
+            document.title = "No Disponible! | ZyrAkaTV";
+
+            root.innerHTML = `
+                <section class="locked-wrapper">
+                    <div class="lock-shield"><i class="fas fa-lock"></i></div>
+                    <div class="locked-pill">
+                        <i class="fas fa-circle" style="font-size: 0.55rem;"></i>
+                        <span>SESIÓN INACTIVA • ACCESO BLOQUEADO</span>
+                    </div>
+                    <h1>${closed.titulo || "BETATEST CERRADO POR EL MOMENTO"}</h1>
+                    <p>${closed.descripcion || "No hay ninguna sesión de pruebas abierta en este instante. Únete a nuestro Discord para enterarte cuando abramos cupos."}</p>
+                    <div class="next-session-box">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>Próxima apertura: <strong>${closed.proxima_fecha || "Por anunciar en Discord"}</strong></span>
+                    </div>
+                    <div class="locked-actions">
+                        <a href="https://discord.gg/DVBdqXgsGu" target="_blank" rel="noopener" class="btn-discord-join">
+                            <i class="fab fa-discord"></i> Avisarme en Discord
+                        </a>
+                        <a href="https://zyrisland.net" class="btn-home-outline">
+                            <i class="fas fa-home"></i> Volver al Inicio
+                        </a>
+                    </div>
+                </section>
+            `;
+        }
+
+        function renderOpenState(data, players) {
+            const root = document.getElementById("betatest-root");
+            const srv = data.servidor || {};
+            const objetivos = Array.isArray(data.objetivos_prueba) ? data.objetivos_prueba : [];
+            const ip = srv.ip || "beta.zyrisland.net";
+            const version = srv.version || "Java 1.21.11";
+            const acceso = srv.acceso || "Premium & No-Premium";
+            const modpackReq = Boolean(srv.modpack_requerido);
+            const modpackNombre = srv.modpack_nombre || (modpackReq ? "Modpack Oficial Requerido" : "Sin mods obligatorios");
+            const modpackUrl = srv.modpack_url || "https://app.zyrisland.net";
+
+            const pct = players.maximos > 0 ? Math.min(100, Math.round((players.actuales / players.maximos) * 100)) : 0;
+            document.title = `BetaTest Abierto (${version}) | ZyrIsland`;
+
+            const discordAnnouncement = [
+                `<:domain_icon:1569527603814207518> **${data.titulo || "BETATEST PÚBLICO — ZYRISLAND"}**`,
+                `<:fandom_icon:1569527610487079133> **Estado:** ABIERTO EN VIVO`,
+                `<:qrcode_icon:1569527644230516849> **IP:** \`${ip}\``,
+                `<:checkpoint:1569524211142103070> **Versión:** ${version} (${acceso})`,
+                `<:snapchat_icon:1569527539158884453> **Cupos:** ${players.actuales}/${players.maximos} jugadores`,
+                `<:minecraftmundo:1298152529275650060> **Panel en vivo:** https://zyrisland.net/betatest/`,
+                `[BetaTest_ZyrIsland](https://app.zyrisland.net/assets/discord_betatest.png)`
+            ].join("\n");
+
+            root.innerHTML = `
+                <header class="live-header">
+                    <div class="live-badges-row">
+                        <span class="status-badge-open">
+                            <span class="pulse-dot-green"></span>
+                            BETATEST ABIERTO • EN VIVO
+                        </span>
+                        <span class="access-badge">
+                            <i class="fas fa-shield-alt"></i> ${acceso}
+                        </span>
+                    </div>
+                    <h1>${data.titulo || "BETATEST PÚBLICO ZYRISLAND"}</h1>
+                    <p>${data.subtitulo || "Conéctate usando los datos oficiales de abajo y ayúdanos a pulir la experiencia antes del estreno."}</p>
+                </header>
+
+                <section class="ip-hero-card" aria-label="Dirección IP del servidor">
+                    <div class="ip-details">
+                        <span class="ip-label"><i class="fas fa-server"></i> Dirección IP Oficial del Servidor</span>
+                        <div class="ip-value" id="server-ip-text">${ip}</div>
+                    </div>
+                    <div class="ip-actions">
+                        <button type="button" id="btn-copy-ip" class="btn-copy-ip">
+                            <i class="fas fa-copy"></i> Copiar IP
+                        </button>
+                    </div>
+                </section>
+
+                <section class="specs-grid" aria-label="Especificaciones técnicas">
+                    <article class="spec-card">
+                        <div class="spec-top">
+                            <div class="spec-icon"><i class="fas fa-code-branch"></i></div>
+                            <span class="spec-title">Versión Compatible</span>
+                        </div>
+                        <div>
+                            <div class="spec-main-value">${version}</div>
+                            <div class="spec-subtext">Soporte activo para <strong>${acceso}</strong></div>
+                        </div>
+                    </article>
+
+                    <article class="spec-card">
+                        <div class="spec-top">
+                            <div class="spec-icon"><i class="fas fa-users"></i></div>
+                            <span class="spec-title">Jugadores en Prueba</span>
+                        </div>
+                        <div>
+                            <div class="spec-main-value">${players.actuales} <span style="font-size: 1rem; color: #888; font-weight: 700;">/ ${players.maximos}</span></div>
+                            <div class="spec-subtext">Ocupación actual: ${pct}%</div>
+                            <div class="players-bar-bg">
+                                <div class="players-bar-fill" style="width: ${pct}%;"></div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="spec-card">
+                        <div class="spec-top">
+                            <div class="spec-icon"><i class="fas fa-cubes"></i></div>
+                            <span class="spec-title">Cliente / Modpack</span>
+                        </div>
+                        <div>
+                            <div class="spec-main-value">${modpackReq ? "Modpack" : "Vanilla"}</div>
+                            <div class="spec-subtext">
+                                ${modpackNombre}
+                                ${modpackReq ? `<br><a href="${modpackUrl}" target="_blank" rel="noopener"><i class="fas fa-download"></i> Descargar en Events</a>` : ""}
+                            </div>
+                        </div>
+                    </article>
+                </section>
+
+                <section class="details-split">
+                    <div class="objectives-card">
+                        <h2 class="card-heading"><i class="fas fa-tasks"></i> ¿Qué estamos probando hoy?</h2>
+                        <ul class="objectives-list">
+                            ${objetivos.length > 0
+                                ? objetivos.map(obj => `<li><i class="fas fa-check-circle"></i><span>${obj}</span></li>`).join("")
+                                : `<li><i class="fas fa-check-circle"></i><span>Rendimiento general del servidor, fluidez de mecánicas y detección de errores.</span></li>`
+                            }
+                        </ul>
+                    </div>
+
+                    <div class="discord-action-card">
+                        <div>
+                            <h2 class="card-heading"><i class="fab fa-discord"></i> Sala de Pruebas & Reportes</h2>
+                            <p>Únete al canal de voz del BetaTest para coordinar en directo o comparte la ficha técnica lista para pegar en Discord.</p>
+                        </div>
+                        <div class="discord-btns-stack">
+                            <a href="https://discord.gg/DVBdqXgsGu" target="_blank" rel="noopener" class="btn-discord-join">
+                                <i class="fab fa-discord"></i> Entrar al Discord Oficial
+                            </a>
+                            <button type="button" id="btn-copy-discord" class="btn-copy-discord-msg">
+                                <i class="fas fa-share-alt"></i> Copiar ficha para Discord
+                            </button>
+                        </div>
+                    </div>
+                </section>
+            `;
+
+            document.getElementById("btn-copy-ip").addEventListener("click", function () {
+                copyText(ip, `IP "${ip}" copiada al portapapeles`, this);
+            });
+
+            document.getElementById("btn-copy-discord").addEventListener("click", () => {
+                copyText(discordAnnouncement, "Ficha formateada lista para pegar en Discord");
+            });
+        }
+
+        async function syncBetaTest() {
+            try {
+                const res = await fetch(`betatest.json?t=${Date.now()}`, { cache: "no-store" });
+                if (!res.ok) throw new Error("No se pudo cargar betatest.json");
+                const data = await res.json();
+                const players = data.activo ? await fetchLivePlayersIfEnabled(data) : null;
+
+                const currentSnapshot = JSON.stringify({ data, players });
+                if (currentSnapshot === lastSnapshot) return;
+                lastSnapshot = currentSnapshot;
+
+                if (data.activo === true) {
+                    renderOpenState(data, players);
+                } else {
+                    renderLockedState(data);
+                }
+            } catch (err) {
+                renderLockedState({
+                    mensaje_cerrado: {
+                        titulo: "BETATEST NO DISPONIBLE",
+                        descripcion: "No fue posible verificar el estado de la sesión en este momento. Consulta los anuncios en nuestro Discord oficial.",
+                        proxima_fecha: "Verificar en Discord"
+                    }
+                });
+            }
+        }
+
+        syncBetaTest();
+        setInterval(syncBetaTest, 5000);
+    </script>
+</body>
+</html>
