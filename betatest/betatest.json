@@ -21,7 +21,7 @@
     "Reportar cualquier fallo visual, de colisión o de audio en el canal de soporte de Discord."
   ],
   "mensaje_cerrado": {
-    "titulo": "BETATEST CERRADO POR EL MOMENTO",
+    "titulo": "NO HAY BETATEST DISPONIBLES",
     "descripcion": "No hay ninguna sesión de pruebas abierta en este instante. Estamos preparando las próximas mecánicas y mapas; únete a Discord para enterarte en cuanto abramos cupos.",
     "proxima_fecha": "PROXIMAMENTE"
   }
