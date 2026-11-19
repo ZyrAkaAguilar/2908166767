@@ -977,12 +977,10 @@
             document.title = `BetaTest Abierto (${version}) | ZyrIsland`;
 
             const discordAnnouncement = [
-                `<:domain_icon:1569527603814207518> **${data.titulo || "BETATEST PÚBLICO — ZYRISLAND"}**`,
-                `<:fandom_icon:1569527610487079133> **Estado:** ABIERTO EN VIVO`,
-                `<:qrcode_icon:1569527644230516849> **IP:** \`${ip}\``,
-                `<:checkpoint:1569524211142103070> **Versión:** ${version} (${acceso})`,
-                `<:snapchat_icon:1569527539158884453> **Cupos:** ${players.actuales}/${players.maximos} jugadores`,
-                `<:minecraftmundo:1298152529275650060> **Panel en vivo:** https://zyrisland.net/betatest/`
+                `<:domain_icon:1569527603814207518> **${data.titulo || "BETATEST PÚBLICO!"}**`,
+                `- Rapido, ven y entra al **Betatest** oficial del ZyrIsland!`,
+                `<:domain_icon:1569527603814207518> **Panel del BetaTest:** https://zyrisland.net/betatest/`,
+                `[BetaTest_ZyrIsland](https://app.zyrisland.net/assets/discord_betatest.png)`
             ].join("\n");
 
             root.innerHTML = `
@@ -1074,7 +1072,7 @@
                                 <i class="fab fa-discord"></i> Entrar al ZyrIsland Club
                             </a>
                             <button type="button" id="btn-copy-discord" class="btn-copy-discord-msg">
-                                <i class="fas fa-share-alt"></i> Copiar ficha para Discord
+                                <i class="fas fa-share-alt"></i> Invita a tus amigos!
                             </button>
                         </div>
                     </div>
