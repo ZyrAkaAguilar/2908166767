@@ -1,18 +1,18 @@
 {
   "activo": true,
-  "titulo": "ZyrIsland Minigames — BetaTest Público v0.4",
+  "titulo": "ZyrIsland Minigames — BetaTest Público v0.1",
   "subtitulo": "Prueba abierta de rendimiento, nuevas arenas competitivas y sincronización del HUD antes del lanzamiento oficial.",
   "servidor": {
     "ip": "beta.zyrisland.net",
     "version": "Java 1.21.1",
     "acceso": "Premium & No-Premium",
     "modpack_requerido": false,
-    "modpack_nombre": "Vanilla Optimizado (Sodium recomendado)",
+    "modpack_nombre": "NULL",
     "modpack_url": "https://app.zyrisland.net"
   },
   "jugadores": {
-    "actuales": 18,
-    "maximos": 40,
+    "actuales": 0,
+    "maximos": 100,
     "usar_api_en_vivo": false
   },
   "objetivos_prueba": [
