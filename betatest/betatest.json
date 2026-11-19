@@ -1,5 +1,5 @@
 {
-  "activo": true,
+  "activo": false,
   "titulo": "ZyrIsland Minigames - Beta v0.1",
   "subtitulo": "Betatest Official, organizado en MINECRAFT ESPAÑOL.",
   "servidor": {
@@ -23,6 +23,6 @@
   "mensaje_cerrado": {
     "titulo": "BETATEST CERRADO POR EL MOMENTO",
     "descripcion": "No hay ninguna sesión de pruebas abierta en este instante. Estamos preparando las próximas mecánicas y mapas; únete a Discord para enterarte en cuanto abramos cupos.",
-    "proxima_fecha": "Por anunciar en Discord"
+    "proxima_fecha": "PROXIMAMENTE"
   }
 }
