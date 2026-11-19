@@ -16,9 +16,9 @@
     "usar_api_en_vivo": false
   },
   "objetivos_prueba": [
-    "Verificar estabilidad de TPS con más de 20 jugadores simultáneos en arena.",
-    "Probar fluidez de los minijuegos caóticos y transiciones entre rondas.",
-    "Reportar cualquier fallo visual, de colisión o de audio en el canal de soporte de Discord."
+    "Primeras versiones del ZyrIsland Minigames",
+    "Probar fluidez de los minijuegos y transiciones entre rondas.",
+    "Probando primeros minijuegos! [Parkour Tag, Hide & Seek, Musical Doors]"
   ],
   "mensaje_cerrado": {
     "titulo": "NO HAY BETATEST DISPONIBLES",
