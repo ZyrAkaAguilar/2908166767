@@ -1,17 +1,22 @@
 [
     {
-        "date": "11 NOV 2026",
-        "title": "En proceso de creacion!",
-        "description": "Estamos en proceso de creacion de este gran estudio!"
+        "date": "ARTISTAS MUSICALES",
+        "title": "Ahora mismo tenemos cupos disponibles!",
+        "description": "¿Tienes experiencia en el arte musical? Entra al servidor oficial del ZyrIsland y cuentanos sobre ti por el puesto."
     },
     {
-        "date": "12 OCT 2026",
-        "title": "Que sera lo siguiente?",
-        "description": "Se esta estructurando un servicio funcional y profesional"
+        "date": "PROGRAMADOR",
+        "title": "Ahora mismo tenemos cupos disponibles!",
+        "description": "¿Tienes experiencia en el arte de los plugins y mods minecraft? Entra al servidor oficial del ZyrIsland y cuentanos sobre ti por el puesto."
     },
     {
-        "date": "05 MARZO 2022",
-        "title": "Los inicios de una era",
-        "description": "Aqui empieza un gran proceso..."
+        "date": "ACTOR DE VOZ",
+        "title": "Ahora mismo tenemos cupos disponibles!",
+        "description": "¿Tienes experiencia en el arte de la actuacion de voz? Entra al servidor oficial del ZyrIsland y cuentanos sobre ti por el puesto."
+    },
+    {
+        "date": "ARTISTA 3D",
+        "title": "Ahora mismo tenemos cupos disponibles!",
+        "description": "¿Tienes experiencia en el arte los modelos 3D y render Minecraft? Entra al servidor oficial del ZyrIsland y cuentanos sobre ti por el puesto."
     }
 ]
